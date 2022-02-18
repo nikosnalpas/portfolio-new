@@ -1,0 +1,15 @@
+.work {
+    width: 100vw;
+    height: 125vh;
+    padding: 130px 100px;
+    @media only screen and (max-width: 1000px) {
+      height: 150vh;
+      padding: 130px 10px;
+    }
+    @media only screen and (max-width: 600px) {
+      height: 290vh;
+    }
+    &__title {
+      opacity: 0;
+    }
+}

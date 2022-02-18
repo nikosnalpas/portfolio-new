@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Nikolaos Nalpantidis</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+    <!-- <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Jura:wght@300&family=Nixie+One&display=swap"
+        rel="stylesheet">
+
+
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/hero.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/projects.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/typography.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/contact.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/work.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/about.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/nav.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/toggle.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/custom-cursor.css'>
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">   </script>
+</head>
+
+<body>
+    <section class="portfolio dark">
+        <!-- <div class="custom-cursor">
+            <div class="circle-container">
+                <div class="circle">
+                    <div class="cursor">
+                        <div class="cursor-container">
+                            <span class="cursor-container-text textLabel normal active">MORE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <section class="navigation">
+            <div class="navigation__burger">
+                <div class="navigation__burger-line"></div>
+                <div class="navigation__burger-line"></div>
+                <div class="navigation__burger-line"></div>
+            </div>
+            <div class="navigation__container">
+                <div class="navigation__container-title">
+                    <a href="#"><span>Nikolaos</span><span> Nalpantidis</span></a>
+                </div>
+                <ul class="navigation__container-list">
+                    <li class="navigation__container-list-item text-jura nav-work">
+                        Work
+                    </li>
+                    <li class="navigation__container-list-item nav-about text-jura">
+                        About
+                    </li>
+                    <li class="navigation__container-list-item nav-contact text-jura">
+                        Contact
+                    </li>
+                    <div class="navigation__container-list-contact">
+                        <div class="contact__profile">
+                            <img src="assets/portrait-square.png">
+                        </div>
+                        <div class="contact__social">
+                            <div class="contact__social-icons">
+                                <div class="contact__social-icons-item">
+                                    <a href="https://www.instagram.com/nikos_nalpas/" target="_blank"><img
+                                            src="assets/instagram-line.svg"></a>
+                                </div>
+                                <div class="contact__social-icons-item">
+                                    <a href="https://twitter.com/nalpas2" target="_blank"><img
+                                            src="assets/twitter-fill.svg"></a>
+                                </div>
+                                <div class="contact__social-icons-item">
+                                    <a href="https://www.linkedin.com/in/nikos-nalpantidis-2422861a4/"
+                                        target="_blank"><img src="assets/linkedin-fill.svg"></a>
+                                </div>
+                                <div class="contact__social-icons-item">
+                                    <a href="https://www.facebook.com/nikos.nalpas/" target="_blank"><img
+                                            src="assets/facebook-fill.svg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="details d-flex text-gray text-jura text-paragraph">
+                            <img src="assets/phone-icon.svg">
+                            <div clsas="text-gray text-jura text-paragraph">
+                                +30 6946341586
+                            </div>
+                        </div>
+                        <div class="details d-flex text-gray text-jura text-paragraph">
+                            <img src="assets/mail-icon.svg">
+                            <div clsas="text-gray text-jura text-paragraph">
+                                nikosnalpas@gmail.com
+                            </div>
+                        </div>
+                        <div class="details d-flex text-gray text-jura text-paragraph">
+                            <img src="assets/location-icon.svg">
+                            <div class="text-gray text-jura text-paragraph">
+                                Greece - Thessaloniki
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+                <div class="navigation__container-toggle">
+                    <label>
+                        <input class='toggle-checkbox' type='checkbox'></input>
+                        <div class='toggle-slot'>
+                            <div class='sun-icon-wrapper'>
+                                <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+                            </div>
+                            <div class='toggle-button'></div>
+                            <div class='moon-icon-wrapper'>
+                                <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </section>
+        <section class="hero">
+            <div class="hero__profile">
+                <div class="hero__profile-title text-big text-light text-bungee">
+                    <span class="hero__profile-title-first">Full Stack</span>
+                    <br><span class="hero__profile-title-scnd">Developer</span>
+                </div>
+                <div class="hero__profile-text text-gray text-paragraph text-jura pt-4">
+                    Currently a Full Stack Developer at <a href="https://www2.deloitte.com/gr/en.html"
+                        target="blank"><span class="text-highlight">Deloitte</span></a>, creating high perfomance and
+                    responsive
+                    sites in a partnership with Adobe.
+                </div>
+                <div class="hero__profile-explore pt-5">
+                    <button class="hero__profile-explore-btn" id="explore-more">
+                        Eplore More
+                    </button>
+                </div>
+            </div>
+            <!-- <div class="mock">
+                <div class="mock__item mock__item-1">
+                    <div class="mock__item-img">
+                        <img src="assets/mock-1.png">
+                    </div>
+                </div>
+                <div class="mock__item mock__item-2">
+                    <div class="mock__item-img">
+                        <img src="assets/mock-2.png">
+                    </div>
+                </div>
+                <div class="mock__item mock__item-3">
+                    <div class="mock__item-img">
+                        <img src="assets/mock-3.png">
+                    </div>
+                </div>
+            </div> -->
+            <div class="projects">
+                <div class="projects__item projects__item-1">
+                    <div class="projects__item-description text-small text-jura text-light">
+                        Developed various components and pages for the new Maserati site, working on both frontend and
+                        backend.
+                    </div>
+                    <div class="projects__item-img">
+                        <img src="assets/maserati.png">
+                    </div>
+                </div>
+                <div class="projects__item projects__item-2">
+                    <div class="projects__item-description text-small text-jura text-light">
+                        Worked on the managment of assets using AEM tags.
+                    </div>
+                    <div class="projects__item-img">
+                        <img src="assets/illy.png">
+                    </div>
+                </div>
+                <div class="projects__item projects__item-3">
+                    <div class="projects__item-description text-small text-jura text-light">
+                        Created the frontend files/variables structure for the new Apg site.
+                    </div>
+                    <div class="projects__item-img">
+                        <img src="assets/apg.png">
+                    </div>
+                </div>
+                <div class="projects__item projects__item-4">
+                    <div class="projects__item-description text-small text-jura text-light">
+                        Developed various components and a worked on making a simulator/calculator for different types
+                        of
+                        transportation systems inside cities.
+                    </div>
+                    <div class="projects__item-img">
+                        <img src="assets/smartmove.png">
+                    </div>
+                </div>
+                <div class="projects__item projects__item-5">
+                    <div class="projects__item-description text-small text-jura text-light">
+                        Used covid-19 data from the WHO api and transformed them into graphs using plotty.
+                    </div>
+                    <div class="projects__item-img">
+                        <img src="assets/take-care.png">
+                    </div>
+                </div>
+                <div class="projects__item projects__item-6">
+                    <div class="projects__item-description text-small text-jura text-light">
+                        Developed the interface and backend of a drinks ordering system for a robot bar inside the msc
+                        starship cruise ship.
+                    </div>
+                    <div class="projects__item-img">
+                        <img src="assets/msc.png">
+                    </div>
+                </div>
+            </div>
+            <div class="hero__indicator">
+                <div class="hero__indicator-line">
+
+                </div>
+                <div class="hero__indicator-arrow">
+                    <img src="assets/arrow.svg">
+                </div>
+            </div>
+        </section>
+        <section class="work">
+            <div class="work__title text-title text-light text-jura text-center">
+                &lt; Recent Work /&gt;
+            </div>
+        </section>
+        <div class="test">
+
+        </div>
+        <section class="about">
+            <div class="about__title text-title text-jura text-light text-center">
+                <div class="about__title-left">&lt; About </div>
+                <div class="about__title-right">Me /&gt;</div>
+            </div>
+            <div class="about__container d-flex">
+                <div class="about__text text-paragraph text-light text-jura p-lg-5 p-1">
+                    <div class="about__text-paragraph">
+                        <div class="about__text-paragraph-text">
+                            From the start of my computer science studies i was passionate about creating software
+                            whether
+                            that
+                            was games, apps, websites or algorithms.
+                        </div>
+                    </div>
+                    <div class="about__text-paragraph">
+                        <div class="about__text-paragraph-text">
+                            My first work experience was a 4 month internship through my university.
+                            After that and since now i work as a full stack developer for Deloitte in a great team
+                            creating
+                            apps/sites mainly in a partnership with Adobe.
+                        </div>
+                    </div>
+                    <div class="about__text-paragraph">
+                        <div class="about__text-paragraph-text">
+                            I have worked for 2+ years with big clients and colleagues all over the world creating high
+                            perfomance and
+                            responsive websites.
+                        </div>
+                    </div>
+                </div>
+                <div class="about__skills p-1 p-lg-5">
+                    <div class="about__skills-container d-flex about__skills-container-1">
+                        <div class="about__skills-container-title text-small text-light text-jura">
+                            Communication
+                        </div>
+                        <div class="about__skills-container-item">
+                            <div class="about__skills-container-item-progress about__skills-container-item-progress-1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__skills-container d-flex about__skills-container-2">
+                        <div class="about__skills-container-title text-small text-light text-jura">
+                            Frontend
+                        </div>
+                        <div class="about__skills-container-item">
+                            <div class="about__skills-container-item-progress about__skills-container-item-progress-2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__skills-container d-flex about__skills-container-3">
+                        <div class="about__skills-container-title text-small text-light text-jura">
+                            Backend
+                        </div>
+                        <div class="about__skills-container-item">
+                            <div class="about__skills-container-item-progress about__skills-container-item-progress-3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__skills-container d-flex about__skills-container-4">
+                        <div class="about__skills-container-title text-small text-light text-jura">
+                            Leadership
+                        </div>
+                        <div class="about__skills-container-item">
+                            <div class="about__skills-container-item-progress about__skills-container-item-progress-4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__skills-container d-flex about__skills-container-5">
+                        <div class="about__skills-container-title text-small text-light text-jura">
+                            Teamwork
+                        </div>
+                        <div class="about__skills-container-item">
+                            <div class="about__skills-container-item-progress about__skills-container-item-progress-5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tickerwrapper">
+                <ul class="list text-gray text-jura text-small">
+                    <li class="listitem">
+                        <span>HTML</span>
+                    </li>
+                    <li class="listitem">
+                        <span>JQuery</span>
+                    </li>
+                    <li class="listitem">
+                        <span>SASS</span>
+                    </li>
+                    <li class="listitem">
+                        <span>JAVA</span>
+                    </li>
+                    <li class="listitem">
+                        <span>PHP</span>
+                    </li>
+                    <li class="listitem">
+                        <span>MySql</span>
+                    </li>
+                    <li class="listitem">
+                        <span>JSON</span>
+                    </li>
+                    <li class="listitem">
+                        <span>XML</span>
+                    </li>
+                    <li class="listitem">
+                        <span>CSS</span>
+                    </li>
+                    <li class="listitem">
+                        <span>Git</span>
+                    </li>
+                    <li class="listitem">
+                        <span>GSAP</span>
+                    </li>
+                    <li class="listitem">
+                        <span>npm</span>
+                    </li>
+                    <li class="listitem">
+                        <span>React Js</span>
+                    </li>
+                    <li class="listitem">
+                        <span>React Native</span>
+                    </li>
+                    <li class="listitem">
+                        <span>Bootstrap</span>
+                    </li>
+                    <li class="listitem">
+                        <span>Firebase</span>
+                    </li>
+                    <li class="listitem">
+                        <span>ScrollMagic</span>
+                    </li>
+                    <li class="listitem">
+                        <span>C/C++</span>
+                    </li>
+                    <li class="listitem">
+                        <span>API</span>
+                    </li>
+                    <li class="listitem">
+                        <span>AJAX</span>
+                    </li>
+                    <li class="listitem">
+                        <span>Slightly</span>
+                    </li>
+                    <li class="listitem">
+                        <span>AEM</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="contact__title text-title text-jura text-light text-center">
+                &lt; Get In Touch /&gt;
+            </div>
+            <div class="contact__form-wrapper">
+                <div class="contact__form-wrapper-container">
+                    <form action="https://formsubmit.co/nikosnalpas@gmail.com" method="POST" class="contact__form">
+                        <input type="text" name="_subject" placeholder="subject" required>
+                        <input type="text" name="email" placeholder="Your email" required>
+                        <input type="text" name="message" placeholder="Your message">
+                        <!-- <input type="name" name="name" class="contact__form-input contact__form-name"
+                            placeholder="Your name">
+                        <input type="email" name="email" class="contact__form-input contact__form-email"
+                            placeholder="Your email">
+                        <input type="subject" name="subject" class="contact__form-input contact__form-subject"
+                            placeholder="Subject">
+                        <textarea type="text" name="message" class="contact__form-input contact__form-body"
+                            placeholder="Body"></textarea> -->
+                        <button class="contact__form-input contact__form-btn-submit" type="submit">Send</button>
+                    </form>
+                    <div class="contact__details text-gray text-paragraph text-jura">
+                        <div class="contact__details-item contact__details-item-1 contact__details-phone d-flex">
+                            <img src="assets/phone-icon.svg">
+                            <div clsas="contact__details-text">
+                                +30 6946341586
+                            </div>
+                        </div>
+                        <div class="contact__details-item contact__details-item-2 contact__details-mail d-flex">
+                            <img src="assets/mail-icon.svg">
+                            <div clsas="contact__details-text">
+                                nikosnalpas@gmail.com
+                            </div>
+                        </div>
+                        <div class="contact__details-item contact__details-item-3 contact__details-location d-flex">
+                            <img src="assets/location-icon.svg">
+                            <div class="contact__details-text">
+                                Greece - Thessaloniki
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact__profile">
+                <img src="assets/portrait-square.png">
+            </div>
+            <div class="contact__social">
+                <div class="contact__social-icons">
+                    <div class="contact__social-icons-item">
+                        <a href="https://www.instagram.com/nikos_nalpas/" target="_blank"><img
+                                src="assets/instagram-line.svg"></a>
+                    </div>
+                    <div class="contact__social-icons-item">
+                        <a href="https://twitter.com/nalpas2" target="_blank"><img src="assets/twitter-fill.svg"></a>
+                    </div>
+                    <div class="contact__social-icons-item">
+                        <a href="https://www.linkedin.com/in/nikos-nalpantidis-2422861a4/" target="_blank"><img
+                                src="assets/linkedin-fill.svg"></a>
+                    </div>
+                    <div class="contact__social-icons-item">
+                        <a href="https://www.facebook.com/nikos.nalpas/" target="_blank"><img
+                                src="assets/facebook-fill.svg"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+        integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"
+        integrity="sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
+
+    <script src='js/scroll-animations.js'></script>
+    <script src='js/custom-cursor.js'></script>
+    <script src='js/main.js'></script>
+    <script src='js/infinite-scroll.js'></script>
+    <script src='js/burger-btn.js'></script>
+</body>
+
+</html>

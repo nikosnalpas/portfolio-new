@@ -1,0 +1,15 @@
+.work {
+  padding: 130px 100px 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .work {
+    padding: 130px 10px 0px;
+  }
+}
+
+.work__title {
+  text-align: center;
+  opacity: 0;
+}
+/*# sourceMappingURL=work.css.map */

@@ -1,0 +1,165 @@
+.about {
+  padding: 50px 100px 200px;
+  position: relative;
+}
+
+@media only screen and (max-width: 700px) {
+  .about {
+    padding: 50px 10px 200px;
+  }
+}
+
+.about__title {
+  padding-bottom: 50px;
+}
+
+.about__title-left {
+  display: inline-block;
+  -webkit-transform: translateX(-500px);
+          transform: translateX(-500px);
+  opacity: 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .about__title-left {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+
+.about__title-right {
+  display: inline-block;
+  -webkit-transform: translateX(500px);
+          transform: translateX(500px);
+  opacity: 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .about__title-right {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .about__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.about__text {
+  width: 50%;
+}
+
+@media only screen and (max-width: 700px) {
+  .about__text {
+    width: 100%;
+  }
+}
+
+.about__text-paragraph {
+  margin-bottom: 20px;
+  display: inline-block;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.about__text-paragraph-text {
+  display: block;
+}
+
+.about__skills {
+  width: 50%;
+}
+
+@media only screen and (max-width: 700px) {
+  .about__skills {
+    width: 100%;
+  }
+}
+
+.about__skills-container {
+  padding-left: 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 700px) {
+  .about__skills-container {
+    padding: 0;
+  }
+}
+
+.about__skills-container-title {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.about__skills-container-item {
+  position: absolute;
+  width: 60%;
+  height: 13px;
+  border: 2px solid #1BEBC1;
+  border-radius: 10px;
+  left: 40%;
+}
+
+@media only screen and (max-width: 700px) {
+  .about__skills-container-item {
+    width: 60%;
+  }
+}
+
+.about__skills-container-item-progress {
+  width: 0%;
+  height: 106%;
+  margin-top: -0.1%;
+  margin-left: -0.3%;
+  background-color: #1BEBC1;
+  border-radius: 10px;
+}
+
+.about__tech-items {
+  width: 200px;
+}
+
+.about__tech-items-item {
+  padding: 30px;
+}
+
+.about .tickerwrapper {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  width: 99.9%;
+  height: 30px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.about ul.list {
+  position: relative;
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about ul.list.cloned {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.about ul.list li {
+  float: left;
+  padding-left: 40px;
+}
+/*# sourceMappingURL=about.css.map */

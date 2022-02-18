@@ -1,0 +1,10 @@
+body {
+  background-color: rgb(37, 37, 37);
+  overflow-x: hidden;
+  &.nav-open {
+    touch-action: none;
+  }
+  .portfolio {
+    overflow-x: hidden;
+  }
+}

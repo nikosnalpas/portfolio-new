@@ -1,0 +1,138 @@
+.hero {
+  height: 100vh;
+  &__profile {
+    padding: 200px 100px;
+    position: relative;
+    overflow: hidden;
+    z-index: 30;
+    @media only screen and (max-width: 1024px) {
+      padding: 100px 10px;
+    }
+    &-title {
+      &-first {
+        display: block;
+        transform: translateX(-300px);
+        animation: titleOpen 0.7s ease-in-out forwards;
+        @keyframes titleOpen {
+          0% {
+            transform: translateX(-300px);
+          }
+          100% {
+            transform: translateX(0px);
+          }
+        } 
+      }
+      &-scnd {
+        transform: translateX(-500px);
+        animation: titleScndOpen 0.7s ease-in-out forwards;
+        @keyframes titleScndOpen {
+          0% {
+            transform: translateX(-500px);
+          }
+          100% {
+            transform: translateX(0px);
+          }
+        } 
+      }
+    }
+    &-text {
+      padding-top: 30px;
+      width: 40%;
+      animation: textOpen 0.7s ease-in-out forwards;
+      @keyframes textOpen {
+        0% {
+          transform: translateX(-750px);
+        }
+        100% {
+          transform: translateX(0px);
+        }
+      } 
+      @media only screen and (max-width: 700px) {
+        width: 100%;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+    &-explore {
+      padding-top: 30px;
+      animation: exploreOpen 0.7s ease-in-out forwards;
+      @keyframes exploreOpen {
+        0% {
+          transform: translateX(-900px);
+        }
+        100% {
+          transform: translateX(0px);
+        }
+      } 
+      @media only screen and (max-width: 1024px) {
+        display: none;
+      }
+      &-btn {
+        border: none;
+        outline: none;
+        border: 2px solid #1BEBC1;
+        background-color: transparent;
+        border-radius: 7px;
+        padding: 10px 25px;
+        font-size: 20px;
+        font-weight: 200;
+        color: white;
+        &:hover {
+          background-color: rgba(26, 235, 193, 0.301);
+        }
+      }
+    }
+    &-img {
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+      }
+    }
+  }
+  &__indicator {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom: 15%;
+    left: calc(50vw - 50px);
+    animation: bounce 2s infinite;
+    @keyframes bounce {
+      0% {
+        transform: scale(0) translateY(0);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1) translateY(100px);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1) translateY(130px);
+        opacity: 0;
+      }
+      // 100% {
+      //   transform: translateY(0);
+      // }
+    }
+    &-line {
+      width: 1px;
+      height: 40px;
+      background-color: #696969;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &-arrow {
+      width: 100%;
+      text-align: center;
+      margin-top: -10px;
+      img {
+        width: 20px;
+        transform: rotate(90deg);
+        filter: invert(41%) sepia(2%) saturate(0%) hue-rotate(13deg) brightness(100%) contrast(95%);
+      }
+    }
+  }
+}

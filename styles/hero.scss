@@ -1,0 +1,106 @@
+.hero {
+  &__profile {
+    padding: 200px 100px;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    @media only screen and (max-width: 1024px) {
+      padding: 100px 10px;
+    }
+    @keyframes init {
+      0% {
+        transform: translateY(-300px) scale(0.2);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0px) scale(1);
+        opacity: 1;
+      }
+    }
+    &-title {
+      animation: init 0.7s ease-in;
+    }
+    &-text {
+      width: 40%;
+      animation: init 0.7s ease-in;
+      @media only screen and (max-width: 700px) {
+        width: 100%;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+    &-explore {
+      animation: init 0.7s ease-in;
+      @media only screen and (max-width: 1024px) {
+        display: none;
+      }
+      &-btn {
+        border: none;
+        outline: none;
+        border: 2px solid #1BEBC1;
+        background-color: transparent;
+        border-radius: 7px;
+        padding: 10px 25px;
+        font-size: 20px;
+        font-weight: 200;
+        color: white;
+        &:hover {
+          background-color: rgba(26, 235, 193, 0.301);
+        }
+      }
+    }
+    &-img {
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+      }
+    }
+  }
+  &__indicator {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom: 15%;
+    left: calc(50vw - 50px);
+    animation: bounce 2s infinite;
+    @keyframes bounce {
+      0% {
+        transform: scale(0) translateY(0);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1) translateY(100px);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1) translateY(130px);
+        opacity: 0;
+      }
+      // 100% {
+      //   transform: translateY(0);
+      // }
+    }
+    &-line {
+      width: 1px;
+      height: 40px;
+      background-color: #696969;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &-arrow {
+      width: 100%;
+      text-align: center;
+      margin-top: -10px;
+      img {
+        width: 20px;
+        transform: rotate(90deg);
+        filter: invert(41%) sepia(2%) saturate(0%) hue-rotate(13deg) brightness(100%) contrast(95%);
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.work {
+  width: 100vw;
+  height: 125vh;
+  padding: 130px 100px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .work {
+    height: 150vh;
+    padding: 130px 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .work {
+    height: 290vh;
+  }
+}
+
+.work__title {
+  opacity: 0;
+}
+/*# sourceMappingURL=work.css.map */

@@ -1,0 +1,42 @@
+body {
+  overflow-x: hidden;
+  background-color: rgb(37, 37, 37);
+  background-color: #0f1720;
+  transition: 0.6s ease-in-out;
+  button {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &.dark {
+    background-color: rgb(37, 37, 37);
+  }
+  &.light {
+    background-color: rgb(233, 233, 233);
+    .text-gray {
+      color: #646464;
+    }
+    .text-highlight {
+      color: #00c9a1;
+    }
+    .navigation {
+      background-color: rgba(245, 245, 245, 1);
+      border-bottom: 1px solid rgb(218, 218, 218);
+    }
+    input {
+      color: rgb(37, 37, 37) !important;
+    }
+    .contact__form-submit-btn {
+      &:after {
+        color:rgb(37, 37, 37);
+      }
+    }
+  }
+  &.stop-scroll {
+    height: 100%;
+    overflow: hidden;
+  }
+  .portfolio {
+    overflow-x: hidden;
+  }
+}
