@@ -1,7 +1,7 @@
 body {
   overflow-x: hidden;
   background-color: #252525;
-  background-color: #0f1720;
+  background-color: #111a25;
   -webkit-transition: 0.6s ease-in-out;
   transition: 0.6s ease-in-out;
 }
@@ -37,6 +37,12 @@ body.light input {
 
 body.light .contact__form-submit-btn:after {
   color: #252525;
+}
+
+@media only screen and (max-width: 800px) {
+  body.light .projects__item-description-titlem, body.light .projects__item-description-text {
+    color: #111a25;
+  }
 }
 
 body.stop-scroll {

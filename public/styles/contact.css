@@ -1,5 +1,5 @@
 .contact {
-  padding: 50px 100px 0;
+  padding: 100px 100px 0;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -58,7 +58,7 @@
   text-align: left;
   width: 50%;
   display: inline-block;
-  border-left: 1px solid #464646;
+  border-left: 1px solid #8893AF;
   padding-left: 40px;
 }
 
@@ -124,12 +124,17 @@
 .contact__form-wrapper-container .contact__form input {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #464646;
+  border-bottom: 1px solid #8893AF;
   font-size: 18px;
   outline: none;
   margin-bottom: 30px;
   color: #bbbbbb;
   width: 100%;
+}
+
+.contact__form-wrapper-container .contact__form input:-webkit-input-placeholder {
+  color: #8893AF;
+  color: red;
 }
 
 .contact__form-wrapper-container .contact__form input:focus {
@@ -180,7 +185,7 @@
   outline: none;
   color: #bbbbbb;
   font-size: 18px;
-  border-bottom: 1px solid #464646;
+  border-bottom: 1px solid #8893AF;
 }
 
 .contact__form-wrapper-container .contact__form-body:focus {
@@ -393,8 +398,7 @@
 
 @media only screen and (max-width: 700px) {
   .contact__form-wrapper-container .contact__details-item {
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 25px;
   }
 }
 
@@ -431,6 +435,12 @@
   width: 100%;
   text-align: center;
   padding-top: 80px;
+}
+
+@media only screen and (max-width: 700px) {
+  .contact__profile {
+    padding-top: 30px;
+  }
 }
 
 .contact__profile img {

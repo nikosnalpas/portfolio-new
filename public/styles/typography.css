@@ -1,17 +1,21 @@
 .text-light {
-  color: white;
+  color: #e0e7fa;
 }
 
 .text-dark {
-  color: black;
+  color: #19283b;
 }
 
 .text-highlight {
   color: #1BEBC1;
 }
 
+.text-highlight-red {
+  color: #FA1200;
+}
+
 .text-gray {
-  color: #bbbbbb;
+  color: #8893AF;
 }
 
 .text-big {
@@ -60,9 +64,9 @@
   font-size: 16px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 700px) {
   .text-small {
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 

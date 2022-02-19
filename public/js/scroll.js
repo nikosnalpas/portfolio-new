@@ -17,7 +17,17 @@ window.addEventListener("wheel", function (e) {
 }, { passive: false });
 
 window.scroll(function () {
-
+    if (isVisible()) {
+        e.preventDefault();
+        if (!isScrolling) {
+            isScrolling = true;
+            if (scrollsDown(e)) {
+                scrollToWork();
+            } else {
+                scrollToHero();
+            }
+        }
+    }
 });
 
 // Touch Events
@@ -30,7 +40,6 @@ window.addEventListener("touchmove", function (e) {
     }
 }, { passive: false });
 window.addEventListener("touchend", function (e) {
-    console.log('end');
     const isScrollEvent = (Math.abs(lastTouch - e.changedTouches[0].clientY) > 2);
     if (isVisible()) {
         // e.preventDefault();
@@ -67,21 +76,23 @@ function isVisible() {
         return false;
     }
 }
+let timeOut = 1000
+if (screenWidth < 1000) {
+    timeOut = 2500;
+}
 
 function scrollToHero() {
     $('html, body').stop().animate({
         scrollTop: $('.hero').offset().top
-    }, 1000, function () {
-        console.log('finsihed scrolling');
+    }, timeOut, function () {
         isScrolling = false;
     });
 }
 
 function scrollToWork() {
     $('html, body').stop().animate({
-        scrollTop: $('.work').offset().top
-    }, 1000, function () {
-        console.log('finsihed scrolling');
+        scrollTop: $('.work').offset().top + 1
+    }, timeOut, function () {
         isScrolling = false;
     });
 }

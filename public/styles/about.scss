@@ -1,9 +1,10 @@
 .about {
-    padding: 50px 100px 200px;
+    min-height: 80vh;
+    padding: 130px 100px 200px;
     position: relative;
 
     @media only screen and (max-width: 700px) {
-        padding: 50px 10px 200px;
+        padding: 100px 10px 200px;
 
         overflow: hidden;
     }

@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Nikolaos Nalpantidis</title>
+    <title>Nikos Nalpantidis</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
     <!-- <link rel="stylesheet" type="text/css"
@@ -25,10 +25,30 @@
     <link rel='stylesheet' type='text/css' media='screen' href='styles/nav.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles/toggle.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles/custom-cursor.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/loading-screen.css'>
     <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">   </script>
 </head>
 
-<body>
+<body class="stop-scroll">
+    <div class="loading-screen">
+        <div class="loading-screen__container">
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+        </div>
+        <div class="loading-screen__text">
+            <div class="loading-screen__text-container text-jura">
+                <span>
+                    N
+                </span>
+                <span>
+                    N
+                </span>
+            </div>
+        </div>
+    </div>
     <section class="portfolio dark">
         <div class="custom-cursor">
             <div class="circle-container">
@@ -60,7 +80,7 @@
             </div>
             <div class="navigation__container">
                 <div class="navigation__container-title text-jura">
-                    <a href="#"><span class="tex-jura text-light">Nikolaos</span><span class="text-jura">
+                    <a href="#"><span class="tex-jura text-light">Nikos</span><span class="text-jura">
                             Nalpantidis</span></a>
                 </div>
                 <ul class="navigation__container-list text-light">
@@ -88,9 +108,6 @@
                         </label>
                     </div>
                     <div class="navigation__container-list-contact">
-                        <div class="contact__profile">
-                            <img src="assets/portrait-square.png">
-                        </div>
                         <div class="contact__social">
                             <div class="contact__social-icons">
                                 <div class="contact__social-icons-item">
@@ -111,19 +128,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="details d-flex text-gray text-jura text-paragraph">
+                        <div class="details text-gray text-jura text-paragraph">
                             <img src="assets/phone-icon.svg">
                             <div clsas="text-gray text-jura text-paragraph">
                                 +30 6946341586
                             </div>
                         </div>
-                        <div class="details d-flex text-gray text-jura text-paragraph">
+                        <div class="details text-gray text-jura text-paragraph">
                             <img src="assets/mail-icon.svg">
                             <div clsas="text-gray text-jura text-paragraph">
                                 nikosnalpas@gmail.com
                             </div>
                         </div>
-                        <div class="details d-flex text-gray text-jura text-paragraph">
+                        <div class="details text-gray text-jura text-paragraph">
                             <img src="assets/location-icon.svg">
                             <div class="text-gray text-jura text-paragraph">
                                 Greece - Thessaloniki
@@ -154,13 +171,16 @@
                     <div class="hero__profile-title-scnd">Developer</div>
                 </div>
                 <div class="hero__profile-text text-gray text-paragraph text-jura pt-4">
-                    Currently a Full Stack Developer at <a href="https://www2.deloitte.com/gr/en.html"
-                        target="blank"><span class="text-highlight">Deloitte</span></a>, creating high perfomance and
+                    Currently a Full Stack Developer at <a class="text-highlight"
+                        href="https://www2.deloitte.com/gr/en.html" target="blank"><span>Deloitte</span></a>, creating
+                    high perfomance and
                     responsive
                     sites in a partnership with Adobe.
+                    <!-- <a class="text-highlight-red" href="https://www.adobe.com/"
+                        target="blank"><span>Adobe.</span></a> -->
                 </div>
                 <div class="hero__profile-explore pt-5">
-                    <button class="hero__profile-explore-btn text-light" id="explore-more">
+                    <button class="hero__profile-explore-btn text-highlight" id="explore-more">
                         Eplore More
                     </button>
                 </div>
@@ -203,7 +223,7 @@
                             </div>
                         </div>
                         <div class="projects__item-img">
-                            <img src="assets/maserati.png">
+                            <img src="assets/maserati.jpeg">
                         </div>
                     </a>
                 </div>
@@ -217,11 +237,14 @@
 
                             </div>
                             <div class="projects__item-description-text">
-                                Worked on the managment of assets using AEM tags.
+                                Worked on the managment of assets using AEM tags. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                                &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                                &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
                             </div>
                         </div>
                         <div class="projects__item-img">
-                            <img src="assets/illy.png">
+                            <img src="assets/illy.jpeg">
                         </div>
                     </a>
                 </div>
@@ -239,7 +262,7 @@
                             </div>
                         </div>
                         <div class="projects__item-img">
-                            <img src="assets/apg.png">
+                            <img src="assets/apg.jpeg">
                         </div>
                     </a>
                 </div>
@@ -260,7 +283,7 @@
                             </div>
                         </div>
                         <div class="projects__item-img">
-                            <img src="assets/smartmove.png">
+                            <img src="assets/smartmove.jpeg">
                         </div>
                     </a>
                 </div>
@@ -277,7 +300,7 @@
                         </div>
                     </div>
                     <div class="projects__item-img">
-                        <img src="assets/take-care.png">
+                        <img src="assets/take-care.jpeg">
                     </div>
                 </div>
                 <div class="projects__item projects__item-6 not-available">
@@ -295,7 +318,7 @@
                         </div>
                     </div>
                     <div class="projects__item-img">
-                        <img src="assets/msc.png">
+                        <img src="assets/msc.jpeg">
                     </div>
                 </div>
             </div>
@@ -352,15 +375,6 @@
                 <div class="about__skills">
                     <div class="about__skills-container about__skills-container-1">
                         <div class="about__skills-container-title text-small text-light text-jura">
-                            Communication
-                        </div>
-                        <div class="about__skills-container-item">
-                            <div class="about__skills-container-item-progress about__skills-container-item-progress-1">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about__skills-container about__skills-container-2">
-                        <div class="about__skills-container-title text-small text-light text-jura">
                             Frontend
                         </div>
                         <div class="about__skills-container-item">
@@ -368,12 +382,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="about__skills-container about__skills-container-3">
+                    <div class="about__skills-container about__skills-container-2">
                         <div class="about__skills-container-title text-small text-light text-jura">
                             Backend
                         </div>
                         <div class="about__skills-container-item">
                             <div class="about__skills-container-item-progress about__skills-container-item-progress-3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__skills-container about__skills-container-3">
+                        <div class="about__skills-container-title text-small text-light text-jura">
+                            Communication
+                        </div>
+                        <div class="about__skills-container-item">
+                            <div class="about__skills-container-item-progress about__skills-container-item-progress-1">
                             </div>
                         </div>
                     </div>
@@ -506,13 +529,13 @@
                     <form action="https://formsubmit.co/nikosnalpas@gmail.com" autocomplete="off" method="POST"
                         class="contact__form" target="dummyframe">
                         <div class="contact__form-item text-jura text-light text-small">Your email</div>
-                        <input class="contact__form-item" type="text" name="email" autocomplete="off"
+                        <input class="contact__form-item text-jura" type="text" name="email" autocomplete="off"
                             placeholder="Type in your email adress" required>
                         <div class="contact__form-item text-jura text-light text-small">Subject</div>
-                        <input class="contact__form-item" type="text" name="_subject"
+                        <input class="contact__form-item text-jura" type="text" name="_subject"
                             placeholder="Type in the email's subject" required>
                         <div class="contact__form-item text-jura text-light text-small">Message</div>
-                        <textarea type="text" name="message" class="contact__form-item contact__form-body"
+                        <textarea type="text" name="message" class="text-jura contact__form-item contact__form-body"
                             placeholder="Type your message here" required></textarea>
                         <div class="contact__form-item contact__form-submit">
                             <button class="contact__form-submit-btn"></button>
@@ -566,6 +589,7 @@
     <script src='js/scroll.js'></script>
     <script src='js/nav.js'></script>
     <script src='js/main.js'></script>
+    <script src='js/loading-screen.js'></script>
     <!-- <script src='js/3d-effect.js'></script> -->
 </body>
 

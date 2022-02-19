@@ -26,9 +26,11 @@ projects.on('mouseleave', function (e) {
     cursor.addClass('close');
     cursor.removeClass('open');
 
-    $(this).find('.projects__item-description-title').removeClass('open');
-    $(this).find('.projects__item-description-line').removeClass('open');
-    $(this).find('.projects__item-description-text').removeClass('open');
+    if (screenWidth > 1000) {
+        $(this).find('.projects__item-description-title').removeClass('open');
+        $(this).find('.projects__item-description-line').removeClass('open');
+        $(this).find('.projects__item-description-text').removeClass('open');
+    }
 });
 
 projects.on('click', function () {

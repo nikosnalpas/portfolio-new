@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   background-color: #252525;
-  background-color: #0f1720;
+  background-color: #111a25;
   border-bottom: 1px solid #1b1b1b;
   border-bottom: 1px solid #0b131b;
   z-index: 50;
@@ -17,11 +17,12 @@
 .navigation.open {
   height: 130vh;
   background-color: rgba(37, 37, 37, 0.95);
+  background-color: #111a25f1;
 }
 
 .navigation__burger {
   position: absolute;
-  top: 10px;
+  top: 12px;
   right: 20px;
   width: 40px;
   height: 30px;
@@ -91,6 +92,7 @@
 @media only screen and (max-width: 1000px) {
   .navigation__container-title {
     left: 20px;
+    width: 70%;
   }
 }
 
@@ -164,7 +166,7 @@
 }
 
 .navigation__container-list-contact .contact__social {
-  padding: 20px 0;
+  padding: 40px 0 20px;
 }
 
 .navigation__container-list-contact .contact__profile {
@@ -177,15 +179,18 @@
 }
 
 .navigation__container-list-contact .details {
-  margin-top: 5px;
+  margin-top: 15px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .navigation__container-list-contact .details img {
-  margin-right: 20px;
-  height: 15px;
+  margin-right: 10px;
+  height: 18px;
   -webkit-filter: invert(84%) sepia(0%) saturate(234%) hue-rotate(179deg) brightness(95%) contrast(79%);
           filter: invert(84%) sepia(0%) saturate(234%) hue-rotate(179deg) brightness(95%) contrast(79%);
 }

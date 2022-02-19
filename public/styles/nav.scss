@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     background-color: rgba(37, 37, 37, 1);
-    background-color: #0f1720;
+    background-color: #111a25;
     border-bottom: 1px solid rgb(27, 27, 27);
     border-bottom: 1px solid #0b131b;
     z-index: 50;
@@ -14,10 +14,11 @@
     &.open {
         height: 130vh;
         background-color: rgba(37, 37, 37, 0.95);
+        background-color: #111a25f1;
     }
     &__burger {
         position: absolute;
-        top: 10px;
+        top: 12px;
         right: 20px;
         width: 40px;
         height: 30px;
@@ -71,6 +72,7 @@
 
             @media only screen and (max-width: 1000px) {
                 left: 20px;
+                width: 70%;
             }
             a {
                 align-self: center;
@@ -113,7 +115,7 @@
                     align-items: center;
                 }
                 .contact__social {
-                    padding: 20px 0;
+                    padding: 40px 0 20px;
                 }
                 .contact__profile {
                     padding-top: 30px;
@@ -123,11 +125,12 @@
                     }
                 }
                 .details {
-                    margin-top: 5px;
+                    margin-top: 15px;
                     align-items: center;
+                    display: flex;
                     img {
-                        margin-right: 20px;
-                        height: 15px;
+                        margin-right: 10px;
+                        height: 18px;
                         filter: invert(84%) sepia(0%) saturate(234%) hue-rotate(179deg) brightness(95%) contrast(79%);
                     }
                 }

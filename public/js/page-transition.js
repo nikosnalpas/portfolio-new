@@ -67,7 +67,7 @@ function calcSizes() {
         item5Left = '37%';
         item6Left = '67%';
 
-        let projectsTop = 140 + 70 + 70 + screenHeight;
+        let projectsTop = 150 + 70 + 70 + screenHeight;
         let itemSeparator = 1.3;
         if (screenWidth < 1000) {
             itemSeparator = 1.3;
@@ -85,9 +85,9 @@ function calcSizes() {
 
         let workHeight = 0;
         if (screenWidth > 1100) {
-            workHeight = + 70 + 100 + (itemHeightBig + 70) * 2;
+            workHeight = 80 + 70 + 100 + (itemHeightBig + 70) * 2;
         } else {
-            workHeight = + 70 + 100 + (itemHeightBig + 100) * 2 + 200;
+            workHeight = 232 + 70 + 100 + (itemHeightBig + 100) * 2 + 200;
         }
 
 
@@ -117,10 +117,8 @@ function calcSizes() {
 
         let workHeight = 0;
         workHeight = 130 * 2 + 90 + 100 * 2 + (itemHeightBig + 220) * 6;
-        workContainer.css('height', workHeight / 1.2);
+        workContainer.css('height', workHeight - 300);
         projectsContainer.css('height', workHeight);
-
-        workContainer.css('height', workHeight - 250);
     }
 
 }

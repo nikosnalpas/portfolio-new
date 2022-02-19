@@ -19,7 +19,7 @@ $("#explore-more").click(function (e) {
     isScrolling = true;
     let work = $('.work');
     $('html, body').stop().animate({
-        'scrollTop': work.offset().top
+        'scrollTop': work.offset().top + 1
     }, 1500, function () {
         isScrolling = false;
     });
@@ -30,7 +30,7 @@ $(".nav-work").click(function (e) {
     let work = $('.work');
     isScrolling = true;
     $('html, body').stop().animate({
-        'scrollTop': work.offset().top
+        'scrollTop': work.offset().top + 1
     }, 800, function () {
         isScrolling = false;
     });

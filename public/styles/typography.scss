@@ -1,15 +1,18 @@
 .text {
     &-light {
-        color: white;
+        color: #e0e7fa;
     }
     &-dark {
-        color: black;
+        color: #19283b;
     }
     &-highlight {
         color: #1BEBC1;
+        &-red {
+            color: #FA1200;
+        }
     }
     &-gray {
-        color: #bbbbbb;
+        color: #8893AF;
     }
     &-big {
         font-size: 4em;
@@ -39,8 +42,8 @@
     }
     &-small {
         font-size: 16px;
-        @media only screen and (max-width: 1200px) {
-            font-size:12px;
+        @media only screen and (max-width: 700px) {
+            font-size: 17px;
         }
     }
     &-bungee {
