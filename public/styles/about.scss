@@ -3,9 +3,13 @@
     padding: 130px 100px 200px;
     position: relative;
 
-    @media only screen and (max-width: 700px) {
-        padding: 100px 10px 200px;
+    @media only screen and (max-width: 1000px) {
+        padding: 100px 20px 200px;
+        overflow: hidden;
+    }
 
+    @media only screen and (max-width: 600px) {
+        padding: 100px 10px 200px;
         overflow: hidden;
     }
     &__title {
@@ -87,6 +91,10 @@
                 border: 2px solid #1BEBC1;
                 border-radius: 10px;
                 left: 40%;
+                @media only screen and (max-width: 1000px) {
+                    left: 50%;
+                    width: 50%;
+                }
                 @media only screen and (max-width: 700px) {
                     width: 60%;
                 }

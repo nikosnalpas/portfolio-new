@@ -56,7 +56,7 @@ function calcSizes() {
     screenWidth = $(window).width();
 
     // Projects
-    if (screenWidth > 600) {
+    if (screenWidth > 1000) {
         duration = '100%';
         itemWidthBig = screenWidth * 0.25;
         itemHeightBig = itemWidthBig * (9 / 17);
@@ -92,8 +92,35 @@ function calcSizes() {
 
 
         workContainer.css('height', workHeight);
+    } else if (screenWidth > 600) {
+        duration = '100%';
+        itemWidthBig = screenWidth * 0.4;
+        itemHeightBig = itemWidthBig * (9 / 17);
+        itemVar = screenHeight * 0.9;
+        item1Left = '4%';
+        item2Left = '54%';
+        item3Left = '4%';
+        item4Left = '54%';
+        item5Left = '4%';
+        item6Left = '54%';
+
+        let projectsTop = 270 + screenHeight * 0.6;
+
+        let projectsDif = 2;
+
+        item1Top = projectsTop;
+        item2Top = projectsTop
+        item3Top = projectsTop + itemHeightBig * (projectsDif);
+        item4Top = projectsTop + itemHeightBig * (projectsDif);
+        item5Top = projectsTop + itemHeightBig * (projectsDif * 2);
+        item6Top = projectsTop + itemHeightBig * (projectsDif * 2);
+
+        let workHeight = 0;
+        workHeight = 130 * 2 + 90 + 100 * 2 + (itemHeightBig + 290) * 3;
+        workContainer.css('height', workHeight - 300);
+        projectsContainer.css('height', workHeight);
     } else {
-        duration = '90%';
+        duration = '100%';
         itemWidthBig = screenWidth * 0.9;
         itemHeightBig = itemWidthBig * (9 / 17);
         itemVar = screenHeight * 0.9;
@@ -154,7 +181,7 @@ if (screenWidth > 1000) {
 // timelineWork.to(projectsContainer, 1, { top: screenHeight, width: screenWidth, left: 0 }, 0);
 timelineWork.to(projects, 1, { width: itemWidthBig, height: itemHeightBig, animation: 'unset' }, 0);
 // timelineWork.to(projects, 1, { animation: 'unset' }, 0);
-if (screenWidth < 600) {
+if (screenWidth < 1000) {
     timelineWork.to(projectDescriptions, 1, { top: '105%', opacity: 1 }, 0);
 } else {
     timelineWork.to(projectDescriptions, 1, { opacity: 1 }, 0);
@@ -182,7 +209,7 @@ sceneWork.setTween(timelineWork)
 sceneWork.addTo(controller);
 
 function workEntered() {
-    if (screenWidth < 600) {
+    if (screenWidth < 1000) {
         projects.find('.projects__item-description-title').addClass('open');
         projects.find('.projects__item-description-line').addClass('open');
         projects.find('.projects__item-description-text').addClass('open');
@@ -190,7 +217,7 @@ function workEntered() {
     projectsContainer.addClass('ordered');
 }
 function workLeave() {
-    if (screenWidth < 600) {
+    if (screenWidth < 1000) {
         projects.find('.projects__item-description-title').removeClass('open');
         projects.find('.projects__item-description-line').removeClass('open');
         projects.find('.projects__item-description-text').removeClass('open');
@@ -210,9 +237,9 @@ timelineAbout.to(aboutTitleRight, 1, { x: '0', opacity: 1 }, 0);
 aboutText.each(function (index, item) {
     timelineAbout.to(item, 1, { scale: 1, opacity: 1 }, 0);
 });
-timelineAbout.to(aboutSkill1, 1, { width: '90%' }, 0);
-timelineAbout.to(aboutSkill2, 1, { width: '88%' }, 0);
-timelineAbout.to(aboutSkill3, 1, { width: '65%' }, 0);
+timelineAbout.to(aboutSkill1, 1, { width: '95%' }, 0);
+timelineAbout.to(aboutSkill2, 1, { width: '80%' }, 0);
+timelineAbout.to(aboutSkill3, 1, { width: '89%' }, 0);
 timelineAbout.to(aboutSkill4, 1, { width: '75%' }, 0);
 timelineAbout.to(aboutSkill5, 1, { width: '90%' }, 0);
 

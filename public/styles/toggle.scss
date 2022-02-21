@@ -10,7 +10,7 @@
     position: relative;
     height: 25px;
     width: 50px;
-    border: 2px solid #e4e7ec;
+    border: 1px solid #e4e7ec;
     border-radius: 10em;
     background-color: white;
     // box-shadow: 0px 4px 5px #e4e7ec;
@@ -21,7 +21,7 @@
   }
   
   .toggle-checkbox:checked ~ .toggle-slot {
-    background-color: #374151;
+    background-color: #192c46;
   }
   
   .toggle-button {
@@ -31,13 +31,13 @@
     width: 1em;
     border-radius: 50%;
     background-color: #ffeccf;
-    box-shadow: inset 0px 0px 0px 0.2em #ffbb52;
+    box-shadow: inset 0px 0px 0px 0.11em #ffbb52;
     transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.5,2,.46,.71);
   }
   
   .toggle-checkbox:checked ~ .toggle-slot .toggle-button {
     background-color: #485367;
-    box-shadow: inset 0px 0px 0px 0.2em white;
+    box-shadow: inset 0px 0px 0px 0.11em white;
     transform: translate(27px, 4.5px);
   }
   

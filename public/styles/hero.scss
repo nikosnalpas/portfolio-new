@@ -5,8 +5,11 @@
     position: relative;
     overflow: hidden;
     z-index: 30;
-    @media only screen and (max-width: 1024px) {
-      padding: 100px 10px;
+    @media only screen and (max-width: 1000px) {
+      padding: 150px 60px;
+    }
+    @media only screen and (max-width: 700px) {
+      padding: 80px 10px 10px;
     }
     &-title {
       &-first {
@@ -43,6 +46,12 @@
       padding-top: 30px;
       width: 40%;
       transform: translateX(-950px);
+      @media only screen and (max-width: 1000px) {
+        width: 80%;
+      }
+      @media only screen and (max-width: 700px) {
+        width: 100%;
+      }
       a {
         &:hover {
           text-decoration: underline;
@@ -73,9 +82,6 @@
           }
         } 
       }
-      @media only screen and (max-width: 700px) {
-        width: 100%;
-      }
       a {
         text-decoration: none;
       }
@@ -94,7 +100,7 @@
           }
         } 
       }
-      @media only screen and (max-width: 1024px) {
+      @media only screen and (max-width: 600px) {
         display: none;
       }
       &-btn {

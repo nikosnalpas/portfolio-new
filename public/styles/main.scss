@@ -36,6 +36,11 @@ body {
         color: #111a25;
       }
     }
+    .details, .contact__details-item {
+      img {
+        filter: invert(8%) sepia(36%) saturate(729%) hue-rotate(173deg) brightness(92%) contrast(95%);
+      }
+    }
   }
   &.stop-scroll {
     height: 100%;

@@ -3,7 +3,7 @@ let lastTouch = -1;
 
 // Scroll events
 window.addEventListener("wheel", function (e) {
-    if (isVisible()) {
+    if (isVisible() && !navOpen()) {
         e.preventDefault();
         if (!isScrolling) {
             isScrolling = true;
@@ -17,8 +17,10 @@ window.addEventListener("wheel", function (e) {
 }, { passive: false });
 
 window.scroll(function () {
-    if (isVisible()) {
-        e.preventDefault();
+    if (isVisible() && !navOpen()) {
+        if (e.cancelable) {
+            e.preventDefault();
+        }
         if (!isScrolling) {
             isScrolling = true;
             if (scrollsDown(e)) {
@@ -35,14 +37,18 @@ window.addEventListener("touchstart", function (e) {
     lastTouch = e.touches[0].clientY;
 }, { passive: false });
 window.addEventListener("touchmove", function (e) {
-    if (isVisible()) {
-        e.preventDefault();
+    if (isVisible() && !navOpen()) {
+        if (e.cancelable) {
+            e.preventDefault();
+        }
     }
 }, { passive: false });
 window.addEventListener("touchend", function (e) {
     const isScrollEvent = (Math.abs(lastTouch - e.changedTouches[0].clientY) > 2);
-    if (isVisible()) {
-        // e.preventDefault();
+    if (isScrollEvent && isVisible() && !navOpen()) {
+        if (e.cancelable) {
+            e.preventDefault();
+        }
         if (!isScrolling) {
             isScrolling = true;
             if (scrollsDown(e)) {
@@ -64,6 +70,10 @@ function scrollsDown(e) {
 }
 
 
+// on scroll check if visible scrolling etc and scroll
+// on touch move etc e.preventDefault
+
+
 function isVisible() {
     var top_of_element = $('.hero').offset().top;
     var bottom_of_element = $('.hero').offset().top + $('.hero').outerHeight();
@@ -78,13 +88,13 @@ function isVisible() {
 }
 let timeOut = 1000
 if (screenWidth < 1000) {
-    timeOut = 2500;
+    timeOut = 1700;
 }
 
 function scrollToHero() {
     $('html, body').stop().animate({
         scrollTop: $('.hero').offset().top
-    }, timeOut, function () {
+    }, 700, function () {
         isScrolling = false;
     });
 }
@@ -95,4 +105,8 @@ function scrollToWork() {
     }, timeOut, function () {
         isScrolling = false;
     });
+}
+
+function navOpen() {
+    return $('.navigation').hasClass('open');
 }

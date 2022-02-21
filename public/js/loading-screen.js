@@ -2,7 +2,6 @@ let timeoutFinished = false,
     documentLoaded = false;
 
 $(document).ready(function () {
-    console.log('test');
     documentLoaded = true;
     if (timeoutFinished) {
         finishLoading();

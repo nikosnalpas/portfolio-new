@@ -45,6 +45,11 @@ body.light .contact__form-submit-btn:after {
   }
 }
 
+body.light .details img, body.light .contact__details-item img {
+  -webkit-filter: invert(8%) sepia(36%) saturate(729%) hue-rotate(173deg) brightness(92%) contrast(95%);
+          filter: invert(8%) sepia(36%) saturate(729%) hue-rotate(173deg) brightness(92%) contrast(95%);
+}
+
 body.stop-scroll {
   height: 100%;
   overflow: hidden;
