@@ -143,6 +143,7 @@
 
 @media only screen and (max-width: 700px) {
   .about__skills-container-item {
+    left: 40%;
     width: 60%;
   }
 }

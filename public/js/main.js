@@ -1,3 +1,9 @@
+// import { getAnalytics, logEvent } from "firebase/analytics";
+
+// const analytics = getAnalytics();
+// logEvent(analytics, 'notification_received');
+
+
 $(window).resize(function () {
     if (screenWidth != $(window).width()) {
         location.reload();

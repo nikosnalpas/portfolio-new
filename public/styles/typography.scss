@@ -17,8 +17,10 @@
     &-big {
         font-size: 4em;
         letter-spacing: 10px;
+        line-height: 1.2em;
         @media only screen and (max-width: 800px) {
             font-size: 2.8em;
+            line-height: 1em;
             letter-spacing: 2px;
         }
     }
