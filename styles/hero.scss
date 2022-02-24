@@ -1,39 +1,113 @@
 .hero {
+  height: 100vh;
   &__profile {
     padding: 200px 100px;
     position: relative;
-    height: 100vh;
-    width: 100vw;
-    z-index: 1;
-    @media only screen and (max-width: 1024px) {
-      padding: 100px 10px;
+    overflow: hidden;
+    z-index: 30;
+    @media only screen and (max-width: 1000px) {
+      padding: 150px 60px;
     }
-    @keyframes init {
-      0% {
-        transform: translateY(-300px) scale(0.2);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0px) scale(1);
-        opacity: 1;
+    @media only screen and (max-width: 700px) {
+      padding: 80px 10px 10px;
+    }
+    @media (orientation: landscape) {
+      @media (hover: none) {
+        @media only screen and (max-width: 1000px) {
+          padding: 40px 60px;
+        }
       }
     }
     &-title {
-      animation: init 0.7s ease-in;
+      &-first {
+        display: block;
+        transform: translateX(-700px);
+        &.open {
+          animation: titleOpen 0.7s ease-in-out forwards;
+          @keyframes titleOpen {
+            0% {
+              transform: translateX(-700px);
+            }
+            100% {
+              transform: translateX(0px);
+            }
+          } 
+        }
+      }
+      &-scnd {
+        transform: translateX(-800px);
+        &.open {
+          animation: titleScndOpen 0.7s ease-in-out forwards;
+          @keyframes titleScndOpen {
+            0% {
+              transform: translateX(-800px);
+            }
+            100% {
+              transform: translateX(0px);
+            }
+          } 
+        }
+      }
     }
     &-text {
+      padding-top: 30px;
       width: 40%;
-      animation: init 0.7s ease-in;
+      transform: translateX(-950px);
+      @media only screen and (max-width: 1000px) {
+        width: 80%;
+      }
       @media only screen and (max-width: 700px) {
         width: 100%;
+      }
+      a {
+        &:hover {
+          text-decoration: underline;
+          text-decoration-thickness: 2px;
+          &.text-highlight-red {
+            color: #FA1200;
+          }
+        }
+        &.text-highlight {
+          &:hover {
+            color: #1BEBC1;
+          }
+        }
+        &.text-highlight-red {
+          &:hover {
+            color: #FA1200;
+          }
+        }
+      }
+      &.open {
+        animation: textOpen 0.7s ease-in-out forwards;
+        @keyframes textOpen {
+          0% {
+            transform: translateX(-950px);
+          }
+          100% {
+            transform: translateX(0px);
+          }
+        } 
       }
       a {
         text-decoration: none;
       }
     }
     &-explore {
-      animation: init 0.7s ease-in;
-      @media only screen and (max-width: 1024px) {
+      padding-top: 30px;
+      transform: translateX(-1200px);
+      &.open {
+        animation: exploreOpen 0.7s ease-in-out forwards;
+        @keyframes exploreOpen {
+          0% {
+            transform: translateX(-1200px);
+          }
+          100% {
+            transform: translateX(0px);
+          }
+        } 
+      }
+      @media only screen and (max-width: 600px) {
         display: none;
       }
       &-btn {
@@ -47,7 +121,10 @@
         font-weight: 200;
         color: white;
         &:hover {
+          transition: 0.5s;
           background-color: rgba(26, 235, 193, 0.301);
+          transform: scale(1.05);
+          box-shadow: 0px 13px 38px 7px rgba(27,235,193,0.14);
         }
       }
     }
@@ -67,23 +144,23 @@
     height: 100px;
     bottom: 15%;
     left: calc(50vw - 50px);
-    animation: bounce 2s infinite;
-    @keyframes bounce {
-      0% {
-        transform: scale(0) translateY(0);
-        opacity: 0;
+    opacity: 0;
+    &.open {
+      animation: bounce 2s infinite;
+      @keyframes bounce {
+        0% {
+          transform: scale(0) translateY(0);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(1) translateY(100px);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1) translateY(130px);
+          opacity: 0;
+        }
       }
-      50% {
-        transform: scale(1) translateY(100px);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(1) translateY(130px);
-        opacity: 0;
-      }
-      // 100% {
-      //   transform: translateY(0);
-      // }
     }
     &-line {
       width: 1px;

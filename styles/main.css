@@ -1,11 +1,63 @@
 body {
-  background-color: #252525;
   overflow-x: hidden;
+  background-color: #252525;
+  background-color: #111a25;
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
 }
 
-body.nav-open {
-  -ms-touch-action: none;
-      touch-action: none;
+body button:hover {
+  cursor: pointer;
+}
+
+body.dark {
+  background-color: #252525;
+}
+
+body.light {
+  background-color: #e9e9e9;
+}
+
+body.light .text-gray {
+  color: #646464;
+}
+
+body.light .text-highlight {
+  color: #00c9a1;
+}
+
+body.light .navigation {
+  background-color: whitesmoke;
+  border-bottom: 1px solid #dadada;
+}
+
+body.light input {
+  color: #252525 !important;
+}
+
+body.light .contact__form-submit-btn:after {
+  color: #252525;
+}
+
+@media (hover: none) {
+  body.light .projects__item-description-title, body.light .projects__item-description-text {
+    color: #111a25;
+  }
+}
+
+body.light .details img, body.light .contact__details-item img {
+  -webkit-filter: invert(8%) sepia(36%) saturate(729%) hue-rotate(173deg) brightness(40%) contrast(30%);
+          filter: invert(8%) sepia(36%) saturate(729%) hue-rotate(173deg) brightness(40%) contrast(30%);
+}
+
+body.light .contact__social-icons-item img:hover {
+  -webkit-filter: invert(8%) sepia(36%) saturate(729%) hue-rotate(173deg) brightness(92%) contrast(95%);
+          filter: invert(8%) sepia(36%) saturate(729%) hue-rotate(173deg) brightness(92%) contrast(95%);
+}
+
+body.stop-scroll {
+  height: 100%;
+  overflow: hidden;
 }
 
 body .portfolio {

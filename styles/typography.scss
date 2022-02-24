@@ -1,21 +1,26 @@
 .text {
     &-light {
-        color: white;
+        color: #e0e7fa;
     }
     &-dark {
-        color: black;
+        color: #19283b;
     }
     &-highlight {
         color: #1BEBC1;
+        &-red {
+            color: #FA1200;
+        }
     }
     &-gray {
-        color: #bbbbbb;
+        color: #8893AF;
     }
     &-big {
         font-size: 4em;
         letter-spacing: 10px;
+        line-height: 1.2em;
         @media only screen and (max-width: 800px) {
             font-size: 2.8em;
+            line-height: 1em;
             letter-spacing: 2px;
         }
     }
@@ -39,6 +44,9 @@
     }
     &-small {
         font-size: 16px;
+        @media only screen and (max-width: 700px) {
+            font-size: 17px;
+        }
     }
     &-bungee {
         font-family: 'Bungee', cursive;

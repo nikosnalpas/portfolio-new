@@ -1,3 +1,12 @@
+.testBtn {
+  position: fixed;
+  width: 300px;
+  height: 70px;
+  top: 0;
+  left: 0;
+  z-index: 500;
+}
+
 .work {
   padding: 130px 100px 50px;
 }
@@ -8,8 +17,233 @@
   }
 }
 
+.work__inputHidden {
+  color: white;
+}
+
+@media (hover: none) {
+  .work__inputHidden {
+    color: black;
+  }
+}
+
 .work__title {
   text-align: center;
+}
+
+.work__title:before {
+  content: '';
+  display: none;
+}
+
+@media (hover: none) {
+  .work__title:before {
+    content: 'touch';
+  }
+}
+
+.work__title span {
   opacity: 0;
+  display: inline-block;
+  -webkit-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
+}
+
+.work__title span:nth-child(1) {
+  -webkit-transform: translateX(-500px);
+          transform: translateX(-500px);
+}
+
+.work__title span:nth-child(2) {
+  -webkit-transform: translateX(500px);
+          transform: translateX(500px);
+}
+
+.work__title.reveal span {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.work__items {
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  height: 100px;
+  margin-top: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .work__items {
+    margin-top: 40px;
+  }
+}
+
+.work .projects {
+  position: relative;
+}
+
+.work .projects__item {
+  -webkit-animation: unset;
+          animation: unset;
+  top: 0;
+  left: 5vw;
+  width: 26vw;
+  height: 13vw;
+}
+
+@media only screen and (max-width: 1050px) {
+  .work .projects__item {
+    width: 42vw;
+    height: 21vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .work .projects__item {
+    width: calc(100vw - 20px);
+    height: calc(((100vw - 20px) / 2));
+    left: 10px;
+  }
+}
+
+.work .projects__item.ordered {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.work .projects__item.ordered:hover {
+  z-index: 20;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  cursor: none;
+}
+
+@media (hover: none) {
+  .work .projects__item.ordered:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media (hover: none) {
+  .work .projects__item-description {
+    opacity: 1;
+    top: 105%;
+    padding: 0;
+  }
+}
+
+.work .projects__item-2 {
+  left: 37vw;
+}
+
+@media only screen and (max-width: 1050px) {
+  .work .projects__item-2 {
+    left: 52vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .work .projects__item-2 {
+    top: calc((100vw - 20px) / 2 + 180px);
+    left: 10px;
+  }
+}
+
+.work .projects__item-3 {
+  left: 68vw;
+}
+
+@media only screen and (max-width: 1050px) {
+  .work .projects__item-3 {
+    left: 5vw;
+    top: calc(21vw + 180px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .work .projects__item-3 {
+    top: calc(((100vw - 20px) / 2) * 2 + 180px * 2);
+    left: 10px;
+  }
+}
+
+.work .projects__item-4 {
+  top: calc(13vw + 70px);
+}
+
+@media (hover: none) {
+  .work .projects__item-4 {
+    top: calc(18vw + 100px);
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .work .projects__item-4 {
+    left: 52vw;
+    top: calc(21vw + 180px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .work .projects__item-4 {
+    top: calc(((100vw - 20px) / 2) * 3 + 180px * 3);
+    left: 10px;
+  }
+}
+
+.work .projects__item-5 {
+  top: calc(13vw + 70px);
+  left: 37vw;
+}
+
+@media (hover: none) {
+  .work .projects__item-5 {
+    top: calc(18vw + 100px);
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .work .projects__item-5 {
+    left: 5vw;
+    top: calc(42vw + 360px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .work .projects__item-5 {
+    top: calc(((100vw - 20px) / 2) * 4 + 180px * 4);
+    left: 10px;
+  }
+}
+
+.work .projects__item-6 {
+  top: calc(13vw + 70px);
+  left: 68vw;
+}
+
+@media (hover: none) {
+  .work .projects__item-6 {
+    top: calc(18vw + 100px);
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .work .projects__item-6 {
+    left: 52vw;
+    top: calc(42vw + 360px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .work .projects__item-6 {
+    top: calc(((100vw - 20px) / 2) * 5 + 180px * 5);
+    left: 10px;
+  }
+}
+
+.work .projects__item-img {
+  position: unset;
 }
 /*# sourceMappingURL=work.css.map */

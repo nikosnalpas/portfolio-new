@@ -8,7 +8,7 @@
   pointer-events: none;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 900px) {
   .custom-cursor {
     display: none;
   }
@@ -21,8 +21,8 @@
 }
 
 .custom-cursor .circle-container .circle {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   position: absolute;
   display: none;
   pointer-events: none;
@@ -40,8 +40,8 @@
 
 .custom-cursor .circle-container .circle .cursor {
   background: white;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   -webkit-box-shadow: 1px 5px 15px 1px rgba(0, 0, 0, 0.29);
   box-shadow: 1px 5px 15px 1px rgba(0, 0, 0, 0.29);
   border-radius: 50%;
@@ -50,14 +50,14 @@
 }
 
 .custom-cursor .circle-container .circle .cursor.open {
-  -webkit-animation: cursor-enabled 0.7s;
-          animation: cursor-enabled 0.7s;
+  -webkit-animation: cursor-enabled 0.5s;
+          animation: cursor-enabled 0.5s;
   -webkit-animation-fill-mode: forwards;
 }
 
 .custom-cursor .circle-container .circle .cursor.close {
-  -webkit-animation: cursor-disabled 0.7s;
-          animation: cursor-disabled 0.7s;
+  -webkit-animation: cursor-disabled 0.5s;
+          animation: cursor-disabled 0.5s;
   -webkit-animation-fill-mode: forwards;
 }
 
@@ -73,8 +73,8 @@
     width: 0;
   }
   100% {
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
     opacity: 1;
   }
 }
@@ -85,8 +85,8 @@
     width: 0;
   }
   100% {
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
     opacity: 1;
   }
 }
@@ -109,31 +109,31 @@
 
 @-webkit-keyframes circle-clicked {
   0% {
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
   }
   50% {
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
   }
   100% {
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
   }
 }
 
 @keyframes circle-clicked {
   0% {
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
   }
   50% {
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
   }
   100% {
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
   }
 }
 
@@ -153,7 +153,7 @@
   margin-left: auto;
   margin-right: auto;
   display: none;
-  font-size: 11px;
+  font-size: 13px;
   text-transform: uppercase;
   width: 70px;
 }

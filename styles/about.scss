@@ -1,11 +1,20 @@
 .about {
-    padding: 50px 100px 200px;
+    min-height: 80vh;
+    padding: 130px 100px 200px;
     position: relative;
-    @media only screen and (max-width: 700px) {
-        padding: 50px 10px 200px;
+
+    @media only screen and (max-width: 1000px) {
+        padding: 100px 20px 200px;
+        overflow: hidden;
+    }
+
+    @media only screen and (max-width: 600px) {
+        padding: 100px 10px 200px;
+        overflow: hidden;
     }
     &__title {
         padding-bottom: 50px;
+        text-align: center;
         &-left {
             display: inline-block;
             transform: translateX(-500px);
@@ -24,14 +33,19 @@
         }
     }
     &__container {
+        display: flex;
+        padding-top: 40px;
+        padding-bottom: 70px;
         @media only screen and (max-width: 700px) {
             flex-direction: column-reverse;
         }
     }
     &__text {
         width: 50%;
+        padding-right: 20px;
         @media only screen and (max-width: 700px) {
             width: 100%;
+            padding-right: 0;
         }
         &-paragraph {
             margin-bottom: 20px;
@@ -58,6 +72,7 @@
             width: 100%;
         }
         &-container {
+            display: flex;
             padding-left: 10%;
             align-items: center;
             position: relative;
@@ -72,17 +87,22 @@
             &-item {
                 position: absolute;
                 width: 60%;
-                height: 13px;
+                height: 7px;
                 border: 2px solid #1BEBC1;
                 border-radius: 10px;
                 left: 40%;
+                @media only screen and (max-width: 1000px) {
+                    left: 50%;
+                    width: 50%;
+                }
                 @media only screen and (max-width: 700px) {
+                    left: 40%;
                     width: 60%;
                 }
                 &-progress {
                     width: 0%;
-                    height: 106%;
-                    margin-top: -0.1%;
+                    height: 120%;
+                    margin-top: -0.2%;
                     margin-left: -0.3%;
                     background-color: #1BEBC1;
                     border-radius: 10px;

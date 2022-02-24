@@ -162,6 +162,13 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navigation__container-list-contact {
+    margin-top: 0;
   }
 }
 
@@ -207,6 +214,13 @@
   .navigation__container-list-item {
     padding: 5px 0;
     margin: 15px;
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navigation__container-list-item {
+    font-size: 20px;
   }
 }
 
@@ -228,6 +242,18 @@
   position: absolute;
   top: 12px;
   right: 100px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .navigation__container-toggle {
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navigation__container-toggle {
+    margin-top: 12px;
+  }
 }
 
 .navigation__container-toggle.toggle-mobile {

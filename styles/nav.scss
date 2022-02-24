@@ -4,18 +4,21 @@
     height: 50px;
     top: 0;
     left: 0;
-    background-color: rgba(37, 37, 37, 0.8);
+    background-color: rgba(37, 37, 37, 1);
+    background-color: #111a25;
     border-bottom: 1px solid rgb(27, 27, 27);
+    border-bottom: 1px solid #0b131b;
     z-index: 50;
     transition: 0.7s ease-in-out;
     -webkit-animation-fill-mode: forwards;
     &.open {
-        height: 100vh;
+        height: 130vh;
         background-color: rgba(37, 37, 37, 0.95);
+        background-color: #111a25f8;
     }
     &__burger {
         position: absolute;
-        top: 10px;
+        top: 12px;
         right: 20px;
         width: 40px;
         height: 30px;
@@ -69,11 +72,11 @@
 
             @media only screen and (max-width: 1000px) {
                 left: 20px;
+                width: 70%;
             }
             a {
                 align-self: center;
                 text-decoration: none;
-                color: white;
                 font-size: 19px;
                 font-weight: 600;
                 letter-spacing: 0.8px;
@@ -87,8 +90,7 @@
         &-list {
             list-style: none;
             height: 50px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
             width: 50%;
             display: flex;
             justify-content: space-between;
@@ -99,6 +101,7 @@
                 opacity: 0;
                 flex-direction: column;
                 padding: 0;
+                width: 100%;
             }
             &.open {
                 transform: scale(1) translateY(50px);
@@ -107,36 +110,46 @@
             &-contact {
                 display: none;
                 @media only screen and (max-width: 1000px) {
-                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 100px;
+                }
+                @media only screen and (max-width: 600px)  {
+                    margin-top: 0;
                 }
                 .contact__social {
-                    padding: 20px 0;
+                    padding: 40px 0 20px;
                 }
                 .contact__profile {
-                    padding-top: 60px;
+                    padding-top: 30px;
                     img {
                         width: 70px;
                         height: 70px;
                     }
                 }
                 .details {
-                    margin-top: 5px;
+                    margin-top: 15px;
                     align-items: center;
+                    display: flex;
                     img {
-                        margin-right: 20px;
-                        height: 15px;
+                        margin-right: 10px;
+                        height: 18px;
                         filter: invert(84%) sepia(0%) saturate(234%) hue-rotate(179deg) brightness(95%) contrast(79%);
                     }
                 }
             }
             &-item {
-                padding: 12px 30px;
-                color: white;
+                padding: 15px 30px;
                 align-self: center;
                 position: relative;
                 @media only screen and (max-width: 1000px) {
                     padding: 5px 0;
-                    margin: 30px;
+                    margin: 15px;
+                    font-size: 40px;
+                }
+                @media only screen and (max-width: 600px) {
+                    font-size: 20px;
                 }
                 &:hover {
                     cursor: pointer;
@@ -154,10 +167,27 @@
         }
         &-toggle {
             position: absolute;
-            top: 8px;
+            top: 12px;
             right: 100px;
             @media only screen and (max-width: 1000px) {
-                display: none;
+                margin-top: 100px;
+            }
+            @media only screen and (max-width: 600px) {
+                margin-top: 12px;
+            }
+            &.toggle-mobile {
+                position: unset;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 20px;
+                @media only screen and (min-width: 1000px) {
+                    display: none;
+                }
+            }
+            &.toggle-desktop {
+                @media only screen and (max-width: 1000px) {
+                    display: none;
+                }
             }
         }
     }

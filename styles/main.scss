@@ -1,8 +1,57 @@
 body {
-  background-color: rgb(37, 37, 37);
   overflow-x: hidden;
-  &.nav-open {
-    touch-action: none;
+  background-color: rgb(37, 37, 37);
+  background-color: #111a25;
+  transition: 0.6s ease-in-out;
+  button {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &.dark {
+    background-color: rgb(37, 37, 37);
+  }
+  &.light {
+    background-color: rgb(233, 233, 233);
+    .text-gray {
+      color: #646464;
+    }
+    .text-highlight {
+      color: #00c9a1;
+    }
+    .navigation {
+      background-color: rgba(245, 245, 245, 1);
+      border-bottom: 1px solid rgb(218, 218, 218);
+    }
+    input {
+      color: rgb(37, 37, 37) !important;
+    }
+    .contact__form-submit-btn {
+      &:after {
+        color:rgb(37, 37, 37);
+      }
+    }
+    .projects__item-description-title, .projects__item-description-text {
+      @media (hover: none) {
+        color: #111a25;
+      }
+    }
+    .details, .contact__details-item {
+      img {
+        filter: invert(8%) sepia(36%) saturate(729%) hue-rotate(173deg) brightness(40%) contrast(30%);
+      }
+    }
+    .contact__social-icons-item {
+      img {
+        &:hover {
+          filter: invert(8%) sepia(36%) saturate(729%) hue-rotate(173deg) brightness(92%) contrast(95%);
+        }
+      }
+    }
+  }
+  &.stop-scroll {
+    height: 100%;
+    overflow: hidden;
   }
   .portfolio {
     overflow-x: hidden;

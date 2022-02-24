@@ -1,27 +1,33 @@
 .text-light {
-  color: white;
+  color: #e0e7fa;
 }
 
 .text-dark {
-  color: black;
+  color: #19283b;
 }
 
 .text-highlight {
   color: #1BEBC1;
 }
 
+.text-highlight-red {
+  color: #FA1200;
+}
+
 .text-gray {
-  color: #bbbbbb;
+  color: #8893AF;
 }
 
 .text-big {
   font-size: 4em;
   letter-spacing: 10px;
+  line-height: 1.2em;
 }
 
 @media only screen and (max-width: 800px) {
   .text-big {
     font-size: 2.8em;
+    line-height: 1em;
     letter-spacing: 2px;
   }
 }
@@ -58,6 +64,12 @@
 
 .text-small {
   font-size: 16px;
+}
+
+@media only screen and (max-width: 700px) {
+  .text-small {
+    font-size: 17px;
+  }
 }
 
 .text-bungee {

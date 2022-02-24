@@ -39,13 +39,18 @@ body.light .contact__form-submit-btn:after {
   color: #252525;
 }
 
-@media only screen and (max-width: 800px) {
-  body.light .projects__item-description-titlem, body.light .projects__item-description-text {
+@media (hover: none) {
+  body.light .projects__item-description-title, body.light .projects__item-description-text {
     color: #111a25;
   }
 }
 
 body.light .details img, body.light .contact__details-item img {
+  -webkit-filter: invert(8%) sepia(36%) saturate(729%) hue-rotate(173deg) brightness(40%) contrast(30%);
+          filter: invert(8%) sepia(36%) saturate(729%) hue-rotate(173deg) brightness(40%) contrast(30%);
+}
+
+body.light .contact__social-icons-item img:hover {
   -webkit-filter: invert(8%) sepia(36%) saturate(729%) hue-rotate(173deg) brightness(92%) contrast(95%);
           filter: invert(8%) sepia(36%) saturate(729%) hue-rotate(173deg) brightness(92%) contrast(95%);
 }

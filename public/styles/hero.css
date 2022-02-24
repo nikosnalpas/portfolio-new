@@ -21,6 +21,12 @@
   }
 }
 
+@media only screen and (orientation: landscape) and (hover: none) and (max-width: 1000px) {
+  .hero__profile {
+    padding: 40px 60px;
+  }
+}
+
 .hero__profile-title-first {
   display: block;
   -webkit-transform: translateX(-700px);

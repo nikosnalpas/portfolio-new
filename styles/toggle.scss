@@ -8,34 +8,37 @@
   
   .toggle-slot {
     position: relative;
-    height: 2em;
-    width: 4em;
-    border: 5px solid #e4e7ec;
+    height: 25px;
+    width: 50px;
+    border: 1px solid #e4e7ec;
     border-radius: 10em;
     background-color: white;
     // box-shadow: 0px 4px 5px #e4e7ec;
     transition: background-color 250ms;
+    &:hover {
+      cursor: pointer;
+    }
   }
   
   .toggle-checkbox:checked ~ .toggle-slot {
-    background-color: #374151;
+    background-color: #192c46;
   }
   
   .toggle-button {
-    transform: translate(11.75em, 0.23em);
+    transform: translate(3.5px, 4.5px);
     position: absolute;
     height: 1em;
     width: 1em;
     border-radius: 50%;
     background-color: #ffeccf;
-    box-shadow: inset 0px 0px 0px 0.2em #ffbb52;
-    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+    box-shadow: inset 0px 0px 0px 0.11em #ffbb52;
+    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.5,2,.46,.71);
   }
   
   .toggle-checkbox:checked ~ .toggle-slot .toggle-button {
     background-color: #485367;
-    box-shadow: inset 0px 0px 0px 0.2em white;
-    transform: translate(1.75em, 0.23em);
+    box-shadow: inset 0px 0px 0px 0.11em white;
+    transform: translate(27px, 4.5px);
   }
   
   .sun-icon {
@@ -50,14 +53,14 @@
     height: 1em;
     width: 1em;
     opacity: 1;
-    transform: translate(2em, 0.2em) rotate(15deg);
+    transform: translate(25px, 4.5px) rotate(15deg);
     transform-origin: 50% 50%;
     transition: opacity 150ms, transform 500ms cubic-bezier(.26,2,.46,.71);
   }
   
   .toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
     opacity: 0;
-    transform: translate(3em, 2em) rotate(0deg);
+    transform: translate(50px, 4.5px) rotate(0deg);
   }
   
   .moon-icon {
@@ -72,12 +75,12 @@
     height: 1em;
     width: 1em;
     opacity: 0;
-    transform: translate(11em, 0.1em) rotate(0deg);
+    transform: translate(1em, 0em) rotate(0deg);
     transform-origin: 50% 50%;
     transition: opacity 150ms, transform 500ms cubic-bezier(.26,2.5,.46,.71);
   }
   
   .toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
     opacity: 1;
-    transform: translate(12em, 2em) rotate(-15deg);
+    transform: translate(3.5px, 4.5px) rotate(-15deg);
   }
