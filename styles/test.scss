@@ -1,49 +1,30 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-
-
-
-.hero-story {
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-    position: relative;
-}
-
-.module-background {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.module-background h1 {
-    color: white;
-    text-align: center;
-    padding-top: 10%;
-}
-
-
-.first-hero .module-background {
-    background-color: green;
-}
-
-.second-hero .module-background {
-    background-color: yellow;
-}
-
-.third-hero .module-background {
-    background-color: orange;
-}
-
-.wht{background:white}
-
-.section-last {
+.box {
     width: 100vw;
-    height: 200vh;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: blue;
+    transform-style: preserve-3d;
+    &-inner {
+        position: absolute;
+        background-color: green;
+        left: 40%;
+        width: 200px;
+        height: 200px;
+        top: 40%;
+        transform: translateZ(60px);
+        animation: float1 10s ease-in-out infinite;
+          @keyframes float1 {
+            0% {
+              transform: translateY(0px) translateZ(20px);
+            }
+            50% {
+              transform: translateY(28px) translateZ(20px);
+            }
+            100% {
+              transform: translateY(0px) translateZ(20px);
+            }
+          }
+    }
 }

@@ -15,7 +15,7 @@
         color: #8893AF;
     }
     &-big {
-        font-size: 4em;
+        font-size: 3.6em;
         letter-spacing: 10px;
         line-height: 1.2em;
         @media only screen and (max-width: 800px) {
@@ -56,5 +56,8 @@
     }
     &-nixie {
         font-family: 'Nixie One', cursive;
+    }
+    &-monoton {
+        font-family: 'Monoton', cursive;
     }
 }

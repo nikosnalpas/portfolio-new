@@ -26,5 +26,9 @@ function finishLoading() {
         projectsContainer.addClass('open');
         $('.mock').addClass('open');
         $('.hero__indicator').addClass('open');
+        $('.navigation').addClass('reveal');
     }, 500);
+    setTimeout(function () {
+        $('.loading-screen').addClass('hide');
+    }, 900);
 }

@@ -1,11 +1,43 @@
 .contact {
   padding: 100px 100px 0;
+  position: relative;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.contact:before {
+  width: 100vw;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: linear-gradient(45deg, #18273a, #04090e);
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 1000px) {
+  .contact:before {
+    background: -webkit-gradient(linear, left top, left bottom, from(#18273a), to(#04090e));
+    background: linear-gradient(#18273a, #04090e);
+  }
 }
 
 @media only screen and (max-width: 1000px) {
   .contact {
     padding: 50px 10px 0;
   }
+}
+
+.contact__wave {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.contact__wave svg {
+  vertical-align: bottom;
 }
 
 .contact__title {
@@ -73,7 +105,7 @@
 
 .contact__form-wrapper-container .contact__form-item {
   opacity: 0;
-  margin-bottom: 4px;
+  margin-bottom: 14px;
 }
 
 .contact__form-wrapper-container .contact__form-item:nth-child(1) {
@@ -121,26 +153,81 @@
           transform: translateX(1250px);
 }
 
-.contact__form-wrapper-container .contact__form input {
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #8893AF;
-  font-size: 18px;
-  outline: none;
+.contact__form-wrapper-container .contact__form-item-label {
+  margin-left: 7px;
+}
+
+.contact__form-wrapper-container .contact__form-item-input {
   margin-bottom: 30px;
-  color: #bbbbbb;
+  position: relative;
+}
+
+.contact__form-wrapper-container .contact__form-item-input:after {
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #1BEBC1;
+  content: '';
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact__form-wrapper-container .contact__form-item-input:focus-within:after {
+  width: calc(100% + 30px);
   width: 100%;
 }
 
-.contact__form-wrapper-container .contact__form input:-webkit-input-placeholder {
-  color: #8893AF;
-  color: red;
+.contact__form-wrapper-container .contact__form input[type=search]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
-.contact__form-wrapper-container .contact__form input:focus {
-  outline: none;
-  border-bottom: 2px solid #1BEBC1;
+.contact__form-wrapper-container .contact__form input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.contact__form-wrapper-container .contact__form input[type="search"]::-webkit-search-decoration,
+.contact__form-wrapper-container .contact__form input[type="search"]::-webkit-search-cancel-button,
+.contact__form-wrapper-container .contact__form input[type="search"]::-webkit-search-results-button,
+.contact__form-wrapper-container .contact__form input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.contact__form-wrapper-container .contact__form input, .contact__form-wrapper-container .contact__form textarea {
   background-color: transparent;
+  border: none;
+  font-size: 18px;
+  outline: none;
+  color: #bbbbbb;
+  width: 100%;
+  padding: 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.contact__form-wrapper-container .contact__form input:-webkit-input-placeholder, .contact__form-wrapper-container .contact__form textarea:-webkit-input-placeholder {
+  color: #8893AF;
+}
+
+.contact__form-wrapper-container .contact__form input:focus, .contact__form-wrapper-container .contact__form textarea:focus {
+  outline: none;
+}
+
+.contact__form-wrapper-container .contact__form input:focus:after, .contact__form-wrapper-container .contact__form textarea:focus:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #1BEBC1;
 }
 
 .contact__form-wrapper-container .contact__form-name {
@@ -175,22 +262,13 @@
   }
 }
 
-.contact__form-wrapper-container .contact__form-body {
-  margin-bottom: 20px;
-  width: 100%;
-  height: 150px;
-  resize: none;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: #bbbbbb;
-  font-size: 18px;
-  border-bottom: 1px solid #8893AF;
+.contact__form-wrapper-container .contact__form textarea {
+  width: calc(100% - 30px);
 }
 
-.contact__form-wrapper-container .contact__form-body:focus {
-  outline: none;
-  border-bottom: 2px solid #1BEBC1;
+.contact__form-wrapper-container .contact__form-body {
+  height: 150px;
+  resize: none;
 }
 
 .contact__form-wrapper-container .contact__form-submit {

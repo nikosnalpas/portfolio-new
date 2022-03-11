@@ -1,5 +1,26 @@
 .hero {
   height: 100vh;
+  position: relative;
+  &:before {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: linear-gradient(-45deg,#04090e, #18273a);
+    content: '';
+    position: absolute;
+    @media only screen and (max-width: 1000px) {
+      background: linear-gradient(#18273a, #04090e);
+    }
+  }
+  &__wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: -10;
+    margin: 0;
+  }
   &__profile {
     padding: 200px 100px;
     position: relative;
@@ -22,6 +43,9 @@
       &-first {
         display: block;
         transform: translateX(-700px);
+        // background: -webkit-linear-gradient(45deg,#cef5ff, #0b2b38 50%, #fff), #fff;
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
         &.open {
           animation: titleOpen 0.7s ease-in-out forwards;
           @keyframes titleOpen {
@@ -145,6 +169,14 @@
     bottom: 15%;
     left: calc(50vw - 50px);
     opacity: 0;
+    &-container {
+      position: absolute; 
+      width: 100px;
+      height: 200px;
+      bottom: 0;
+      z-index: 500;
+      left: calc(50vw - 50px);
+    }
     &.open {
       animation: bounce 2s infinite;
       @keyframes bounce {

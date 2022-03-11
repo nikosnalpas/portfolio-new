@@ -4,13 +4,17 @@
     height: 50px;
     top: 0;
     left: 0;
-    background-color: rgba(37, 37, 37, 1);
-    background-color: #111a25;
+    background-color: #111a2571;
+    backdrop-filter: blur(7px);
     border-bottom: 1px solid rgb(27, 27, 27);
     border-bottom: 1px solid #0b131b;
     z-index: 50;
     transition: 0.7s ease-in-out;
     -webkit-animation-fill-mode: forwards;
+    transform: translateY(-100px);
+    &.reveal {
+        transform: translateY(0);
+    }
     &.open {
         height: 130vh;
         background-color: rgba(37, 37, 37, 0.95);
@@ -57,6 +61,21 @@
         }
     }
     &__container {
+        &-logo {
+            height: 35px;
+            margin-top: 7.5px;
+            .first-n {
+                // filter: invert(99%) sepia(99%) saturate(6%) hue-rotate(120deg) brightness(103%) contrast(102%);
+                filter: invert(17%) sepia(23%) saturate(1713%) hue-rotate(174deg) brightness(100%) contrast(92%);
+                // opacity: 0.5;
+            }
+            .scnd-n {
+                // filter: invert(85%) sepia(59%) saturate(640%) hue-rotate(91deg) brightness(94%) contrast(96%);
+                filter: invert(79%) sepia(65%) saturate(2069%) hue-rotate(136deg) brightness(97%) contrast(90%);
+                filter: invert(89%) sepia(64%) saturate(6891%) hue-rotate(83deg) brightness(109%) contrast(84%);
+                opacity: 0.7;
+            }
+        }
         &-title {
             height: 50px;
             display: flex;
@@ -66,7 +85,7 @@
             margin-left: auto; 
             margin-right: auto; 
             top: 0;
-            width: 200px;
+            
             transition: 1s ease-in-out;
             -webkit-animation-fill-mode: forwards;
 
@@ -91,7 +110,7 @@
             list-style: none;
             height: 50px;
             margin: 0 auto;
-            width: 50%;
+            width: 30%;
             display: flex;
             justify-content: space-between;
             transition: 1s ease-in-out;
@@ -140,7 +159,7 @@
                 }
             }
             &-item {
-                padding: 15px 30px;
+                padding: 16px 30px;
                 align-self: center;
                 position: relative;
                 @media only screen and (max-width: 1000px) {
@@ -151,15 +170,22 @@
                 @media only screen and (max-width: 600px) {
                     font-size: 20px;
                 }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    height: 2px;
+                    border-radius: 1px;
+                    width: 0;
+                    background-color: #1BEBC1;
+                    bottom: 0;
+                    left: 50%;
+                    transition: 0.4s;
+                }
                 &:hover {
                     cursor: pointer;
                     &:before {
-                        content: "";
-                        position: absolute;
-                        height: 2px;
+                        transition: 0.4s;
                         width: 100%;
-                        background-color: #1BEBC1;
-                        bottom: 0;
                         left: 0;
                     }
                 }

@@ -4,10 +4,10 @@
   left: -10vw;
   height: 100vh;
   z-index: 200;
-  background-color: #111a25;
+  background: linear-gradient(-45deg, #04090e, #18273a);
 }
 
-.loading-screen.close {
+.loading-screen.hide {
   display: none;
 }
 
@@ -45,6 +45,22 @@
   opacity: 0;
   -webkit-animation: unset;
           animation: unset;
+}
+
+.loading-screen__logo {
+  width: 100px;
+  height: 100px;
+}
+
+.loading-screen__logo .first-n {
+  -webkit-filter: invert(17%) sepia(18%) saturate(1713%) hue-rotate(174deg) brightness(97%) contrast(92%);
+          filter: invert(17%) sepia(18%) saturate(1713%) hue-rotate(174deg) brightness(97%) contrast(92%);
+}
+
+.loading-screen__logo .scnd-n {
+  -webkit-filter: invert(79%) sepia(65%) saturate(2069%) hue-rotate(136deg) brightness(97%) contrast(90%);
+          filter: invert(79%) sepia(65%) saturate(2069%) hue-rotate(136deg) brightness(97%) contrast(90%);
+  opacity: 0.5;
 }
 
 .loading-screen .text {

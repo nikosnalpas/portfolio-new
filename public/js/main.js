@@ -39,3 +39,13 @@ contactForm.on('submit', function () {
     });
 });
 
+$('.projects__not-available-container').tilt({
+    glare: true,
+    maxGlare: 1
+});
+
+$('.projectss').tilt({
+    glare: true,
+    maxTilt: 10,
+    maxGlare: 1
+});

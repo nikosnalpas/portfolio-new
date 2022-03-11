@@ -4,8 +4,8 @@
     left: -10vw;
     height: 100vh;
     z-index: 200;
-    background-color: #111a25;
-    &.close {
+    background: linear-gradient(-45deg,#04090e, #18273a);
+    &.hide {
         display: none;
     }
     &.close {
@@ -27,6 +27,23 @@
             transform: scale(0);
             opacity: 0;
             animation: unset;
+        }
+    }
+    &__logo {
+        // color: #fff;
+        // color: #1f3450;
+        width: 100px;
+        height: 100px;
+        // filter: invert(99%) sepia(99%) saturate(6%) hue-rotate(120deg) brightness(103%) contrast(102%);
+        .first-n {
+            // filter: invert(99%) sepia(99%) saturate(6%) hue-rotate(120deg) brightness(103%) contrast(102%);
+            filter: invert(17%) sepia(18%) saturate(1713%) hue-rotate(174deg) brightness(97%) contrast(92%);
+            // opacity: 0.5;
+        }
+        .scnd-n {
+            // filter: invert(85%) sepia(59%) saturate(640%) hue-rotate(91deg) brightness(94%) contrast(96%);
+            filter: invert(79%) sepia(65%) saturate(2069%) hue-rotate(136deg) brightness(97%) contrast(90%);
+            opacity: 0.5;
         }
     }
     .text {

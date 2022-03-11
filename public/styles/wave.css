@@ -1,0 +1,46 @@
+.wave {
+  height: 200vh;
+  width: 100vw;
+  padding-top: 200px;
+  background: linear-gradient(-45deg, #04090e, #18273a);
+  overflow-x: hidden;
+}
+
+.wave-particle {
+  border-radius: 50%;
+  background-color: #1BEBC1;
+  position: absolute;
+  height: 5px;
+  width: 5px;
+}
+
+@-webkit-keyframes partBounce {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+  }
+  50% {
+    -webkit-transform: scale(1.2) translateY(100px);
+            transform: scale(1.2) translateY(100px);
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes partBounce {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+  }
+  50% {
+    -webkit-transform: scale(1.2) translateY(100px);
+            transform: scale(1.2) translateY(100px);
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+  }
+}
+/*# sourceMappingURL=wave.css.map */

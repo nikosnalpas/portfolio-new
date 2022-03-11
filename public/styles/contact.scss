@@ -1,7 +1,33 @@
 .contact {
     padding: 100px 100px 0;
+    position: relative;
+    margin-bottom:0;
+    padding-bottom:0;
+    &:before {
+      width: 100vw;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: linear-gradient(45deg, #18273a, #04090e);
+      content: '';
+      position: absolute;
+      z-index: -1;
+      @media only screen and (max-width: 1000px) {
+        //height: 100vh;
+        background: linear-gradient(#18273a, #04090e);
+      }
+    }
     @media only screen and (max-width: 1000px) {
       padding: 50px 10px 0;
+    }
+    &__wave {
+      width: 100vw;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      svg {
+        vertical-align: bottom;
+      }
     }
     &__title {
       text-align: center;
@@ -41,7 +67,7 @@
             }
             &-item {
               opacity: 0;
-              margin-bottom: 4px;
+              margin-bottom: 14px;
               &:nth-child(1) {
                 transform: translateX(200px);
               }
@@ -69,24 +95,67 @@
               &:nth-child(8) {
                 transform: translateX(1250px);
               }
+              &-label {
+                margin-left: 7px;
+              }
+              &-input {
+                margin-bottom: 30px;
+                position: relative;
+                &:after {
+                  position: absolute;
+                  width: 0;
+                  height: 2px;
+                  bottom: 0;
+                  left: 0;
+                  background-color: #1BEBC1;
+                  content: '';
+                  transition: 0.5s;
+                }
+                &:focus-within {
+                  &:after {
+                    width: calc(100% + 30px);
+                    width: 100%;
+                  }
+                }
+              }
             }
-            input {
+            input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+            input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+            input[type="search"]::-webkit-search-decoration,
+            input[type="search"]::-webkit-search-cancel-button,
+            input[type="search"]::-webkit-search-results-button,
+            input[type="search"]::-webkit-search-results-decoration {
+              display: none;
+            }
+            input, textarea {
               background-color: transparent;
               border: none;
-              border-bottom: 1px solid #8893AF;
+             // border-bottom: 1px solid #8893AF;
               font-size: 18px;
               outline: none;
-              margin-bottom: 30px;
               color: #bbbbbb;
               width: 100%;
+              padding: 15px;
+              border-top-left-radius: 20px;
+              border-top-right-radius: 20px;
+              background-color:rgba(0, 0, 0, 0.15);
+              // background: linear-gradient(-45deg, #0e1f302f, #0000001e);
+              position: relative;
               &:-webkit-input-placeholder {
                 color: #8893AF;
-                color: red;
               }
               &:focus {
                 outline: none;
-                border-bottom: 2px solid #1BEBC1;
-                background-color: transparent;
+                &:after {
+                  position: absolute;
+                  content: '';
+                  height: 2px;
+                  width: 100%;
+                  left: 0;
+                  bottom: 0;
+                  background-color: #1BEBC1;
+                }
+                //border-bottom: 2px solid #1BEBC1;
               }
             }
             &-name {
@@ -109,21 +178,12 @@
                 width: 100%;
               }
             }
+            textarea {
+              width: calc(100% - 30px);
+            }
             &-body {
-              margin-bottom: 20px;
-              width: 100%;
               height: 150px;
               resize: none;
-              background-color: transparent;
-              border: none;
-              outline: none;
-              color: #bbbbbb;
-              font-size: 18px;
-              border-bottom: 1px solid #8893AF;
-              &:focus {
-                outline: none;
-                border-bottom: 2px solid #1BEBC1;
-              }
             }
             &-submit {
               position: absolute;

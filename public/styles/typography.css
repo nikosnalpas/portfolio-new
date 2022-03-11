@@ -19,7 +19,7 @@
 }
 
 .text-big {
-  font-size: 4em;
+  font-size: 3.6em;
   letter-spacing: 10px;
   line-height: 1.2em;
 }
@@ -82,5 +82,9 @@
 
 .text-nixie {
   font-family: 'Nixie One', cursive;
+}
+
+.text-monoton {
+  font-family: 'Monoton', cursive;
 }
 /*# sourceMappingURL=typography.css.map */

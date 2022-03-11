@@ -1,5 +1,32 @@
 .hero {
   height: 100vh;
+  position: relative;
+}
+
+.hero:before {
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: linear-gradient(-45deg, #04090e, #18273a);
+  content: '';
+  position: absolute;
+}
+
+@media only screen and (max-width: 1000px) {
+  .hero:before {
+    background: -webkit-gradient(linear, left top, left bottom, from(#18273a), to(#04090e));
+    background: linear-gradient(#18273a, #04090e);
+  }
+}
+
+.hero__wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: -10;
+  margin: 0;
 }
 
 .hero__profile {
@@ -237,6 +264,15 @@
   bottom: 15%;
   left: calc(50vw - 50px);
   opacity: 0;
+}
+
+.hero__indicator-container {
+  position: absolute;
+  width: 100px;
+  height: 200px;
+  bottom: 0;
+  z-index: 500;
+  left: calc(50vw - 50px);
 }
 
 .hero__indicator.open {

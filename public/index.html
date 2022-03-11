@@ -11,8 +11,9 @@
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Jura:wght@300&family=Nixie+One&display=swap"
-        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee&family=Jura:wght@300&family=Nixie+One&display=swap&family=Monoton&display=swap""
+        rel=" stylesheet">
 
 
     <link rel='stylesheet' type='text/css' media='screen' href='styles/main.css'>
@@ -26,6 +27,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='styles/toggle.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles/custom-cursor.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles/loading-screen.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/wave.css'>
     <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">   </script>
 </head>
 
@@ -40,12 +42,51 @@
         </div>
         <div class="loading-screen__text">
             <div class="loading-screen__text-container text-jura">
-                <span>
+                <svg class="loading-screen__logo" height="100%" stroke-miterlimit="10"
+                    style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;"
+                    version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <metadata>
+                        <vectornator:setting key="IsTimeLapseWatermarkDisabled" value="false" />
+                        <vectornator:setting key="UndoHistoryDisabled" value="true" />
+                        <vectornator:setting key="VNDimensionsVisible" value="true" />
+                        <vectornator:setting key="VNSnapToGuides" value="true" />
+                        <vectornator:setting key="WDCMYKEnabledKey" value="false" />
+                        <vectornator:setting key="WDDisplayWhiteBackground" value="false" />
+                        <vectornator:setting key="WDDynamicGuides" value="false" />
+                        <vectornator:setting key="WDGuidesVisible" value="true" />
+                        <vectornator:setting key="WDIsolateActiveLayer" value="false" />
+                        <vectornator:setting key="WDOutlineMode" value="false" />
+                        <vectornator:setting key="WDRulersVisible" value="true" />
+                        <vectornator:setting key="WDSnapToEdges" value="false" />
+                        <vectornator:setting key="WDSnapToGrid" value="false" />
+                        <vectornator:setting key="WDSnapToPoints" value="false" />
+                        <vectornator:setting key="WDUnits" value="Pixels" />
+                    </metadata>
+                    <defs />
+                    <g id="Layer-1" vectornator:layerName="Layer 1">
+                        <path
+                            d="M1236.46 1030.04L1243.55 2045.9L1594.42 1832.57L1601.28 1672.25L2594.42 2362.23L2596.65 54.9992L2275.38 286.972L2275.77 1726.61L1236.46 1030.04Z"
+                            fill="#000000" fill-rule="evenodd" opacity="1" stroke="#000000" stroke-linecap="butt"
+                            stroke-linejoin="round" stroke-width="10" />
+                        <path class="first-n"
+                            d="M55.0341 6.87312L55.9307 504.509L130.401 456.166L130.474 145.084L341.065 293.618L341.027 84.8031L270.475 130.14L271.798 154.307L55.0341 6.87312Z"
+                            fill="#000000" fill-rule="evenodd" opacity="1" stroke="#000000" stroke-linecap="butt"
+                            stroke-linejoin="round" stroke-width="10" />
+                        <path class="scnd-n"
+                            d="M161.311 216.853L162.839 435.619L238.4 389.678L239.877 355.152L453.749 503.739L454.23 6.87566L385.045 56.8312L385.128 366.859L161.311 216.853Z"
+                            fill="#000000" fill-rule="evenodd" opacity="1" stroke="#000000" stroke-linecap="butt"
+                            stroke-linejoin="round" stroke-width="10" />
+                    </g>
+                </svg>
+                <!-- <img class="loading-screen__logo" src="assets/nnLogo.svg"> -->
+                <!-- <span>
                     N
                 </span>
                 <span>
                     N
-                </span>
+                </span> -->
             </div>
         </div>
     </div>
@@ -62,11 +103,23 @@
             </div>
         </div>
         <div class="projects__not-available">
-            <div class="projects__not-available-container">
+            <div class="projects__not-available-container" data-tilt>
                 <div class="projects__not-available-container-close">
                     <div class="projects__not-available-container-close-line"></div>
                     <div class="projects__not-available-container-close-line"></div>
                 </div>
+                <div class="projects__not-available-container-404">
+                    <div class="projects__not-available-container-404-text text-monoton text-big">
+                        404
+                    </div>
+                </div>
+                <!-- <div class="projects__not-available-container-rings">
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                </div> -->
                 <div class="projects__not-available-container-text text-jura text-regular">
                     Selected project is not live at the moment.
                 </div>
@@ -80,8 +133,46 @@
             </div>
             <div class="navigation__container">
                 <div class="navigation__container-title text-jura">
-                    <a href="#"><span class="tex-jura text-light">Nikos</span><span class="text-jura">
-                            Nalpantidis</span></a>
+                    <a href="#">
+                        <svg class="navigation__container-logo" height="100%" stroke-miterlimit="10"
+                            style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;"
+                            version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <metadata>
+                                <vectornator:setting key="IsTimeLapseWatermarkDisabled" value="false" />
+                                <vectornator:setting key="UndoHistoryDisabled" value="true" />
+                                <vectornator:setting key="VNDimensionsVisible" value="true" />
+                                <vectornator:setting key="VNSnapToGuides" value="true" />
+                                <vectornator:setting key="WDCMYKEnabledKey" value="false" />
+                                <vectornator:setting key="WDDisplayWhiteBackground" value="false" />
+                                <vectornator:setting key="WDDynamicGuides" value="false" />
+                                <vectornator:setting key="WDGuidesVisible" value="true" />
+                                <vectornator:setting key="WDIsolateActiveLayer" value="false" />
+                                <vectornator:setting key="WDOutlineMode" value="false" />
+                                <vectornator:setting key="WDRulersVisible" value="true" />
+                                <vectornator:setting key="WDSnapToEdges" value="false" />
+                                <vectornator:setting key="WDSnapToGrid" value="false" />
+                                <vectornator:setting key="WDSnapToPoints" value="false" />
+                                <vectornator:setting key="WDUnits" value="Pixels" />
+                            </metadata>
+                            <defs />
+                            <g id="Layer-1" vectornator:layerName="Layer 1">
+                                <path
+                                    d="M1236.46 1030.04L1243.55 2045.9L1594.42 1832.57L1601.28 1672.25L2594.42 2362.23L2596.65 54.9992L2275.38 286.972L2275.77 1726.61L1236.46 1030.04Z"
+                                    fill="#000000" fill-rule="evenodd" opacity="1" stroke="#000000"
+                                    stroke-linecap="butt" stroke-linejoin="round" stroke-width="10" />
+                                <path class="first-n"
+                                    d="M55.0341 6.87312L55.9307 504.509L130.401 456.166L130.474 145.084L341.065 293.618L341.027 84.8031L270.475 130.14L271.798 154.307L55.0341 6.87312Z"
+                                    fill="#000000" fill-rule="evenodd" opacity="1" stroke="#000000"
+                                    stroke-linecap="butt" stroke-linejoin="round" stroke-width="10" />
+                                <path class="scnd-n"
+                                    d="M161.311 216.853L162.839 435.619L238.4 389.678L239.877 355.152L453.749 503.739L454.23 6.87566L385.045 56.8312L385.128 366.859L161.311 216.853Z"
+                                    fill="#000000" fill-rule="evenodd" opacity="1" stroke="#000000"
+                                    stroke-linecap="butt" stroke-linejoin="round" stroke-width="10" />
+                            </g>
+                        </svg>
+                    </a>
                 </div>
                 <ul class="navigation__container-list text-light">
                     <li class="navigation__container-list-item text-jura nav-work">
@@ -166,6 +257,20 @@
             </div>
         </section>
         <section class="hero">
+            <!-- <div class="hero__wave">
+                <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 490" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                            <stop stop-color="rgba(17, 26, 37, 1)" offset="0%"></stop>
+                            <stop stop-color="rgba(27, 235, 193, 1)" offset="100%"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+                        d="M0,294L26.7,253.2C53.3,212,107,131,160,98C213.3,65,267,82,320,122.5C373.3,163,427,229,480,261.3C533.3,294,587,294,640,269.5C693.3,245,747,196,800,187.8C853.3,180,907,212,960,245C1013.3,278,1067,310,1120,334.8C1173.3,359,1227,376,1280,359.3C1333.3,343,1387,294,1440,269.5C1493.3,245,1547,245,1600,228.7C1653.3,212,1707,180,1760,196C1813.3,212,1867,278,1920,253.2C1973.3,229,2027,114,2080,122.5C2133.3,131,2187,261,2240,294C2293.3,327,2347,261,2400,196C2453.3,131,2507,65,2560,32.7C2613.3,0,2667,0,2720,8.2C2773.3,16,2827,33,2880,106.2C2933.3,180,2987,310,3040,367.5C3093.3,425,3147,408,3200,392C3253.3,376,3307,359,3360,318.5C3413.3,278,3467,212,3520,155.2C3573.3,98,3627,49,3680,65.3C3733.3,82,3787,163,3813,204.2L3840,245L3840,490L3813.3,490C3786.7,490,3733,490,3680,490C3626.7,490,3573,490,3520,490C3466.7,490,3413,490,3360,490C3306.7,490,3253,490,3200,490C3146.7,490,3093,490,3040,490C2986.7,490,2933,490,2880,490C2826.7,490,2773,490,2720,490C2666.7,490,2613,490,2560,490C2506.7,490,2453,490,2400,490C2346.7,490,2293,490,2240,490C2186.7,490,2133,490,2080,490C2026.7,490,1973,490,1920,490C1866.7,490,1813,490,1760,490C1706.7,490,1653,490,1600,490C1546.7,490,1493,490,1440,490C1386.7,490,1333,490,1280,490C1226.7,490,1173,490,1120,490C1066.7,490,1013,490,960,490C906.7,490,853,490,800,490C746.7,490,693,490,640,490C586.7,490,533,490,480,490C426.7,490,373,490,320,490C266.7,490,213,490,160,490C106.7,490,53,490,27,490L0,490Z">
+                    </path>
+                </svg>
+            </div> -->
             <div class="hero__profile">
                 <div class="hero__profile-title text-big text-light text-bungee">
                     <div class="hero__profile-title-first">Full-Stack</div>
@@ -189,7 +294,7 @@
             <div class="mock">
                 <div class="mock__item mock__item-1">
                     <div class="mock__item-img">
-                        <img src="assets/mock-1.png">
+                        <img src="assets/maserati-2.jpeg">
                     </div>
                 </div>
                 <div class="mock__item mock__item-2">
@@ -200,6 +305,21 @@
                 <div class="mock__item mock__item-3">
                     <div class="mock__item-img">
                         <img src="assets/mock-3.png">
+                    </div>
+                </div>
+                <div class="mock__item mock__item-4">
+                    <div class="mock__item-img">
+                        <img src="assets/mock-4.png">
+                    </div>
+                </div>
+                <div class="mock__item mock__item-4">
+                    <div class="mock__item-img">
+                        <img src="assets/mock-1.png">
+                    </div>
+                </div>
+                <div class="mock__item mock__item-4">
+                    <div class="mock__item-img">
+                        <img src="assets/mock-4.png">
                     </div>
                 </div>
                 <div class="mock__item mock__item-4">
@@ -284,7 +404,7 @@
                             </div>
                         </div>
                         <div class="projects__item-img">
-                            <img src="assets/illy.jpeg">
+                            <img src="assets/illy.jpg">
                         </div>
                     </a>
                 </div>
@@ -331,8 +451,51 @@
                     <img src="assets/arrow.svg">
                 </div>
             </div>
+            <div class="hero__indicator-container">
+            </div>
         </section>
         <section class="work">
+            <!-- <section class="wave">
+
+            </section> -->
+            <div class="header">
+
+                <!--Content before waves-->
+                <div class="inner-header flex">
+                    <!--Just the logo.. Don't mind this-->
+                    <svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500"
+                        xml:space="preserve">
+                        <path fill="#FFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
+                        <g>
+                            <path fill="#FFF"
+                                d="M250.4,0.8C112.7,0.8,1,112.4,1,250.2c0,137.7,111.7,249.4,249.4,249.4c137.7,0,249.4-111.7,249.4-249.4
+              C499.8,112.4,388.1,0.8,250.4,0.8z M383.8,326.3c-62,0-101.4-14.1-117.6-46.3c-17.1-34.1-2.3-75.4,13.2-104.1
+              c-22.4,3-38.4,9.2-47.8,18.3c-11.2,10.9-13.6,26.7-16.3,45c-3.1,20.8-6.6,44.4-25.3,62.4c-19.8,19.1-51.6,26.9-100.2,24.6l1.8-39.7		c35.9,1.6,59.7-2.9,70.8-13.6c8.9-8.6,11.1-22.9,13.5-39.6c6.3-42,14.8-99.4,141.4-99.4h41L333,166c-12.6,16-45.4,68.2-31.2,96.2	c9.2,18.3,41.5,25.6,91.2,24.2l1.1,39.8C390.5,326.2,387.1,326.3,383.8,326.3z" />
+                        </g>
+                    </svg>
+                    <h1></h1>
+                </div>
+
+                <!--Waves Container-->
+                <div>
+                    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                        <defs>
+                            <path id="gentle-wave"
+                                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                        </defs>
+                        <g class="parallax">
+                            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(27, 235, 193 ,0.5" />
+                            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(27, 235, 193 ,0.3)" />
+                            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(27, 235, 193 ,0.2)" />
+                            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(27, 235, 193, 1)" />
+                        </g>
+                    </svg>
+                </div>
+                <!--Waves end-->
+
+            </div>
             <div class="work__title text-title text-light text-jura">
                 <span>
                     &lt; Recent
@@ -345,35 +508,83 @@
             <div class="work__items">
 
             </div>
+            <div class="work__wave">
+
+            </div>
+            <div class="work__wave work__wave-2">
+
+            </div>
         </section>
         <section class="about">
+            <div class="header">
+
+                <!--Content before waves-->
+                <div class="inner-header flex">
+                    <!--Just the logo.. Don't mind this-->
+                    <svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500"
+                        xml:space="preserve">
+                        <path fill="#FFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
+                        <g>
+                            <path fill="#FFF"
+                                d="M250.4,0.8C112.7,0.8,1,112.4,1,250.2c0,137.7,111.7,249.4,249.4,249.4c137.7,0,249.4-111.7,249.4-249.4
+              C499.8,112.4,388.1,0.8,250.4,0.8z M383.8,326.3c-62,0-101.4-14.1-117.6-46.3c-17.1-34.1-2.3-75.4,13.2-104.1
+              c-22.4,3-38.4,9.2-47.8,18.3c-11.2,10.9-13.6,26.7-16.3,45c-3.1,20.8-6.6,44.4-25.3,62.4c-19.8,19.1-51.6,26.9-100.2,24.6l1.8-39.7		c35.9,1.6,59.7-2.9,70.8-13.6c8.9-8.6,11.1-22.9,13.5-39.6c6.3-42,14.8-99.4,141.4-99.4h41L333,166c-12.6,16-45.4,68.2-31.2,96.2	c9.2,18.3,41.5,25.6,91.2,24.2l1.1,39.8C390.5,326.2,387.1,326.3,383.8,326.3z" />
+                        </g>
+                    </svg>
+                    <h1></h1>
+                </div>
+
+                <!--Waves Container-->
+                <div>
+                    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                        <defs>
+                            <path id="gentle-wave"
+                                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                        </defs>
+                        <g class="parallax">
+                            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(27, 235, 193 ,0.5" />
+                            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(27, 235, 193 ,0.3)" />
+                            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(27, 235, 193 ,0.2)" />
+                            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(27, 235, 193, 1)" />
+                        </g>
+                    </svg>
+                </div>
+                <!--Waves end-->
+
+            </div>
             <div class="about__title text-title text-jura text-light">
                 <div class="about__title-left">&lt; About </div>
                 <div class="about__title-right">Me /&gt;</div>
+            </div>
+            <div class="about__wave">
+
             </div>
             <div class="about__container">
                 <div class="about__text text-paragraph text-light text-jura">
                     <div class="about__text-paragraph">
                         <div class="about__text-paragraph-text">
                             From the start of my computer science studies i was passionate about creating software
-                            whether
-                            that
-                            was games, apps, websites or algorithms.
+                            whether that was games, apps, websites or algorithms. Apart from the personal projects, I
+                            received my first work experience
+                            developing an e-shop for art pieces.
                         </div>
                     </div>
                     <div class="about__text-paragraph">
                         <div class="about__text-paragraph-text">
-                            My first work experience was a 4 month internship through my university.
-                            After that and since now i work as a full stack developer for Deloitte with a great team,
-                            creating
-                            apps/sites in a partnership with Adobe.
+                            Nowadays I work as a full stack developer at Deloitte for 2+ years, creating
+                            apps/sites in a partnership with Adobe. My role is creating the code structures of projects
+                            and
+                            developing them, while also assisting and guiding new comers in the team.
                         </div>
                     </div>
                     <div class="about__text-paragraph">
                         <div class="about__text-paragraph-text">
-                            I have worked for 2+ years with clients and colleagues all over the world creating high
-                            perfomance and
-                            responsive websites.
+                            Communicating with valuable clients and colleagues all over the world I improved my
+                            leadership skills. I continue improving my knowledge and skills daily along with up and
+                            comming
+                            tecnologies.
                         </div>
                     </div>
                 </div>
@@ -506,6 +717,20 @@
             </div>
         </section>
         <section class="contact">
+            <div class="contact__wave">
+                <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 100" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                            <stop stop-color="rgba(54, 194, 166, 1)" offset="0%"></stop>
+                            <stop stop-color="rgba(54, 194, 166, 1)" offset="100%"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+                        d="M0,0L80,10C160,20,320,40,480,51.7C640,63,800,67,960,56.7C1120,47,1280,23,1440,23.3C1600,23,1760,47,1920,48.3C2080,50,2240,30,2400,26.7C2560,23,2720,37,2880,43.3C3040,50,3200,50,3360,53.3C3520,57,3680,63,3840,56.7C4000,50,4160,30,4320,21.7C4480,13,4640,17,4800,23.3C4960,30,5120,40,5280,38.3C5440,37,5600,23,5760,20C5920,17,6080,23,6240,35C6400,47,6560,63,6720,63.3C6880,63,7040,47,7200,38.3C7360,30,7520,30,7680,25C7840,20,8000,10,8160,11.7C8320,13,8480,27,8640,36.7C8800,47,8960,53,9120,50C9280,47,9440,33,9600,25C9760,17,9920,13,10080,21.7C10240,30,10400,50,10560,63.3C10720,77,10880,83,11040,73.3C11200,63,11360,37,11440,23.3L11520,10L11520,100L11440,100C11360,100,11200,100,11040,100C10880,100,10720,100,10560,100C10400,100,10240,100,10080,100C9920,100,9760,100,9600,100C9440,100,9280,100,9120,100C8960,100,8800,100,8640,100C8480,100,8320,100,8160,100C8000,100,7840,100,7680,100C7520,100,7360,100,7200,100C7040,100,6880,100,6720,100C6560,100,6400,100,6240,100C6080,100,5920,100,5760,100C5600,100,5440,100,5280,100C5120,100,4960,100,4800,100C4640,100,4480,100,4320,100C4160,100,4000,100,3840,100C3680,100,3520,100,3360,100C3200,100,3040,100,2880,100C2720,100,2560,100,2400,100C2240,100,2080,100,1920,100C1760,100,1600,100,1440,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z">
+                    </path>
+                </svg>
+            </div>
             <div class="contact__title text-title text-jura text-light text-center">
                 &lt; Get In Touch /&gt;
             </div>
@@ -542,15 +767,24 @@
                     <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
                     <form action="https://formsubmit.co/nikosnalpas@gmail.com" autocomplete="off" method="POST"
                         class="contact__form" target="dummyframe">
-                        <div class="contact__form-item text-jura text-light text-small">Your email</div>
-                        <input class="contact__form-item text-jura" type="text" name="email" autocomplete="off"
-                            placeholder="Type in your email adress" required>
-                        <div class="contact__form-item text-jura text-light text-small">Subject</div>
-                        <input class="contact__form-item text-jura" type="text" name="_subject"
-                            placeholder="Type in the email's subject" required>
-                        <div class="contact__form-item text-jura text-light text-small">Message</div>
-                        <textarea type="text" name="message" class="text-jura contact__form-item contact__form-body"
-                            placeholder="Type your message here" required></textarea>
+                        <div class="contact__form-item contact__form-item-label text-jura text-light text-small">E-mail
+                        </div>
+                        <div class="contact__form-item contact__form-item-input text-jura">
+                            <input type="search" name="email" autocomplete="off" placeholder="Type in your email adress"
+                                required>
+                        </div>
+                        <div class="contact__form-item contact__form-item-label text-jura text-light text-small">Subject
+                        </div>
+                        <div class="contact__form-item contact__form-item-input text-jura">
+                            <input class="text-jura" type="search" name="subject"
+                                placeholder="Type in the email's subject" required>
+                        </div>
+                        <div class="contact__form-item contact__form-item-label text-jura text-light text-small">Message
+                        </div>
+                        <div class="contact__form-item contact__form-item-input text-jura">
+                            <textarea type="text" name="message" class="text-jura contact__form-body"
+                                placeholder="Type your message here" required></textarea>
+                        </div>
                         <div class="contact__form-item contact__form-submit">
                             <button class="contact__form-submit-btn text-highlight"></button>
                         </div>
@@ -606,6 +840,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.0.3/tilt.jquery.min.js"
+        integrity="sha512-14AZ/DxUrlF26z6v7egDkpJHKyJRn/7ue2BgpWZ/fmqrqVzf4PrQnToy99sHmKwzKev/VZ1tjPxusuTV/n8CcQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src='js/page-transition.js'></script>
     <script src='js/custom-cursor.js'></script>
@@ -614,6 +851,8 @@
     <script src='js/scroll.js'></script>
     <script src='js/nav.js'></script>
     <script src='js/loading-screen.js'></script>
+    <script src='js/projects-tilt.js'></script>
+    <!-- <script src='js/wave.js'></script> -->
 
 </body>
 

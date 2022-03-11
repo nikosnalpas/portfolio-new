@@ -2,7 +2,10 @@ body {
   overflow-x: hidden;
   background-color: rgb(37, 37, 37);
   background-color: #111a25;
+  background-color: #18273a;
   transition: 0.6s ease-in-out;
+  padding: 0;
+  margin: 0;
   button {
     &:hover {
       cursor: pointer;
@@ -12,16 +15,111 @@ body {
     background-color: rgb(37, 37, 37);
   }
   &.light {
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(255, 255, 255);
+    .text-highlight {
+      color: #A930E2;
+    }
+    .text-highlight {
+      color: #387a9c;
+    }
+    .navigation__container-title a span:nth-child(2) {
+      color: #387a9c;
+    }
+    .navigation__container-list-item {
+      &:before {
+        background-color: #387a9c;
+      }
+    }
+    .hero__profile-explore-btn {
+      border: 2px solid #387a9c;
+      &:hover {
+        background-color: rgba(56, 122, 156, 0.301);
+        box-shadow: 0px 13px 38px 7px rgba(56, 122, 156,0.35);
+      }
+    }
     .text-gray {
       color: #646464;
     }
-    .text-highlight {
-      color: #00c9a1;
-    }
     .navigation {
-      background-color: rgba(245, 245, 245, 1);
-      border-bottom: 1px solid rgb(218, 218, 218);
+      background-color: rgba(245, 245, 245, 0.281);
+      &.open {
+        background-color: rgb(245, 245, 245);
+      }
+      border-bottom: 1px solid rgba(180, 180, 180, 0.452);
+    }
+    .projects__item {
+      -webkit-box-shadow: 13px 21px 50px 13px rgba(0, 0, 0, 0.329); 
+      box-shadow: 13px 21px 50px 13px rgba(0, 0, 0, 0.4);
+    }
+    .hero {
+      &:before {
+        background: linear-gradient(-45deg,#a7a7a7, #ffffff);
+        @media only screen and (max-width: 1000px) {
+          background: linear-gradient(#ffffff, #a7a7a7);
+        }
+      }
+    }
+    .work {
+      &:before {
+        background: linear-gradient(45deg,#ffffff,#a7a7a7);
+        @media only screen and (max-width: 1000px) {
+          background: linear-gradient(#a7a7a7, #ffffff);
+        }
+      }
+      &:after {
+        //background: linear-gradient(45deg,#ffffff,#a7a7a7);
+        @media only screen and (max-width: 1000px) {
+          display: none;
+        }
+      }
+      .projects__item-description-line {
+        background-color: #387a9c;
+      }
+    }
+    .header {
+      svg {
+        filter: invert(45%) sepia(88%) saturate(327%) hue-rotate(156deg) brightness(85%) contrast(91%);
+      }
+    }
+    .about {
+      &:before {
+        background: linear-gradient(-45deg,#a7a7a7, #ffffff);
+        @media only screen and (max-width: 1000px) {
+          background: linear-gradient(#ffffff, #a7a7a7);
+        }
+      }
+      &__skills-container-item {
+        border: 2px solid #3882a8;
+        &-progress {
+          background-color: #3882a8;
+        }
+      }
+      &__text-paragraph-text {
+        &:before {
+          background-color: #387a9c;
+        }
+      }
+    }
+    .contact {
+      &:before {
+        background: linear-gradient(45deg,#ffffff,#a7a7a7);
+        @media only screen and (max-width: 1000px) {
+          background: linear-gradient( #a7a7a7, #ffffff);
+        }
+      }
+      &__wave {
+        svg {
+          filter: invert(45%) sepia(88%) saturate(327%) hue-rotate(156deg) brightness(85%) contrast(91%);
+        }
+      }
+      input, textarea {
+        &:focus {
+          border-bottom: 2px solid #3882a8;
+        }
+      }
+      textarea {
+        color: rgb(37, 37, 37);
+      }
     }
     input {
       color: rgb(37, 37, 37) !important;
@@ -29,6 +127,11 @@ body {
     .contact__form-submit-btn {
       &:after {
         color:rgb(37, 37, 37);
+      }
+      border: 2px solid #387a9c;
+      &:hover {
+        background-color: rgba(56, 122, 156, 0.301);
+        box-shadow: 0px 13px 38px 7px rgba(56, 122, 156,0.35);
       }
     }
     .projects__item-description-title, .projects__item-description-text {

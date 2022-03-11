@@ -19,6 +19,7 @@ let portfolio = $('.portfolio'),
     aboutTitleLeft = $('.about__title-left'),
     aboutTitleRight = $('.about__title-right'),
     aboutText = $('.about__text-paragraph'),
+    aboutSkills = $('.about__skills-container'),
     aboutSkill1 = $('.about__skills-container-item-progress-1'),
     aboutSkill2 = $('.about__skills-container-item-progress-2'),
     aboutSkill3 = $('.about__skills-container-item-progress-3'),
@@ -70,21 +71,21 @@ var controller = new ScrollMagic.Controller();
 
 // WORK SECTION
 
-var timelineWork = new TimelineLite();
+// var timelineWork = new TimelineLite();
 
-timelineWork.to(heroTitleFirst, 1, { marginLeft: '-150px' }, 0);
-timelineWork.to(heroTitleScnd, 1, { marginLeft: '-300px' }, 0);
-timelineWork.to(heroText, 1, { marginLeft: '-450px' }, 0);
-timelineWork.to(heroBtn, 1, { marginLeft: '-600px' }, 0);
-timelineWork.to(mockItems, 1, { opacity: 0 }, 0);
+// timelineWork.to(heroTitleFirst, 1, { marginLeft: '-150px' }, 0);
+// timelineWork.to(heroTitleScnd, 1, { marginLeft: '-300px' }, 0);
+// timelineWork.to(heroText, 1, { marginLeft: '-450px' }, 0);
+// timelineWork.to(heroBtn, 1, { marginLeft: '-600px' }, 0);
+// timelineWork.to(mockItems, 1, { opacity: 0 }, 0);
 
-var sceneWork = new ScrollMagic.Scene({
-    triggerElement: ".work",
-    triggerHook: "onEnter",
-    duration: duration,
-})
-sceneWork.setTween(timelineWork)
-sceneWork.addTo(controller);
+// var sceneWork = new ScrollMagic.Scene({
+//     triggerElement: ".work",
+//     triggerHook: "onEnter",
+//     duration: duration,
+// })
+// sceneWork.setTween(timelineWork)
+// sceneWork.addTo(controller);
 
 
 // ABOUT SECTION
@@ -97,20 +98,40 @@ timelineAbout.to(aboutTitleRight, 1, { x: '0', opacity: 1 }, 0);
 aboutText.each(function (index, item) {
     timelineAbout.to(item, 1, { scale: 1, opacity: 1 }, 0);
 });
+aboutSkills.each(function (index, item) {
+    timelineAbout.to(item, 1, { scale: 1, opacity: 1 }, 0);
+});
+
 timelineAbout.to(aboutSkill1, 1, { width: '95%' }, 0);
 timelineAbout.to(aboutSkill2, 1, { width: '80%' }, 0);
 timelineAbout.to(aboutSkill3, 1, { width: '89%' }, 0);
-timelineAbout.to(aboutSkill4, 1, { width: '75%' }, 0);
-// timelineAbout.to(aboutSkill5, 1, { width: '90%' }, 0);
+timelineAbout.to(aboutSkill4, 1, { width: '80%' }, 0);
+timelineAbout.to(aboutSkill5, 1, { width: '90%' }, 0);
 
 
 var sceneAbout = new ScrollMagic.Scene({
     triggerElement: ".about",
     triggerHook: "onEnter",
-    duration: "90%"
-})
+    duration: "100%"
+}).on('enter', function () {
+
+}).on('leave', function () {
+    // $('.about__skills-container-item-progress').removeClass('fill');
+});
 sceneAbout.setTween(timelineAbout)
 sceneAbout.addTo(controller);
+
+// var sceneAboutCenter = new ScrollMagic.Scene({
+//     triggerElement: ".about__title",
+//     triggerHook: "onCenter",
+//     duration: "100%"
+// }).on('enter', function () {
+//     $('.about__skills-container-item-progress').addClass('fill');
+// }).on('leave', function () {
+//     //$('.about__skills-container-item-progress').removeClass('fill');
+// });
+// sceneAboutCenter.addTo(controller);
+
 
 
 
@@ -133,7 +154,7 @@ aboutText.each(function (index, item) {
 var sceneContact = new ScrollMagic.Scene({
     triggerElement: ".contact",
     triggerHook: "onEnter",
-    duration: "80%"
+    duration: "95%"
 }).on('enter', function () {
 
 }).on('leave', function () {

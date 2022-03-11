@@ -68,6 +68,30 @@ calcSizes();
 
 var controller = new ScrollMagic.Controller();
 
+var timelineHero = new TimelineLite();
+
+
+var sceneHero = new ScrollMagic.Scene({
+    triggerElement: ".hero",
+    triggerHook: "onLeave",
+    duration: '100%',
+    reverse: true
+}).on('enter', function () {
+    if (!projectsContainer.hasClass('nikos')) {
+        projectsContainer.addClass('nikos');
+        console.log('is scrolling to work');
+        TweenLite.to(window, 1, { scrollTo: { y: ".work", autoKill: false } });
+        orderProjects(1);
+    } else {
+        projectsContainer.removeClass('nikos');
+        console.log('is scrolling to hero');
+        TweenLite.to(window, 1, { scrollTo: { y: ".hero", autoKill: false } });
+        unOrderProjects(1);
+    }
+})
+sceneHero.setTween(timelineHero)
+sceneHero.addTo(controller);
+
 // WORK SECTION
 
 var timelineWork = new TimelineLite();
@@ -141,5 +165,8 @@ var sceneContact = new ScrollMagic.Scene({
 });
 sceneContact.setTween(timelineContact)
 sceneContact.addTo(controller);
+
+
+
 
 

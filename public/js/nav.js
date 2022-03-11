@@ -6,6 +6,9 @@ let burgerBtn = $('.navigation__burger'),
     navigationTitle = $('.navigation__container-title'),
     toggleDarkLight = $('.toggle-slot');
 
+const audioSwitch = new Audio();
+audioSwitch.src = "./assets/switch.wav";
+
 burgerBtn.on('click', function () {
     $('body').toggleClass('stop-scroll');
     navigation.toggleClass('open');
@@ -21,9 +24,13 @@ $("#explore-more").click(function (e) {
     let work = $('.work');
     $('html, body').stop().animate({
         'scrollTop': work.offset().top + 1
-    }, 1500, function () {
+    }, 1000, function () {
         isScrolling = false;
     });
+});
+
+$(".hero__indicator-container").click(function () {
+    $("#explore-more").click();
 });
 
 $(".nav-work").click(function (e) {
@@ -37,7 +44,6 @@ $(".nav-work").click(function (e) {
         isScrolling = false;
     });
     if (screenWidth < 1000) {
-        console.log('test');
         burgerBtn.click();
     }
 });
@@ -94,6 +100,7 @@ navigationTitle.click(function (e) {
 });
 
 toggleDarkLight.on('click', function () {
+    audioSwitch.play();
     if ($('body').hasClass('light')) {
         $('.text-dark').each(function () {
             $(this).toggleClass('text-light');

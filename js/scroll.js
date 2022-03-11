@@ -8,11 +8,6 @@ let isScrolling = false,
     flipDuration = 1,
     touchDevice = false;
 
-// if (screenWidth < 1000) {
-//     timeOut = 1700;
-//     flipDuration = 1.7;
-// }
-
 var hiddenInputColor = $('.work__inputHidden').css("color");
 
 if (hiddenInputColor === 'rgb(0, 0, 0)') {
@@ -48,49 +43,41 @@ window.addEventListener("wheel", function (e) {
     }
 }, { passive: false });
 
-// Touch Events
-window.addEventListener("touchstart", function (e) {
-    lastTouch = e.touches[0].clientY;
-}, { passive: false });
-window.addEventListener("touchmove", function (e) {
-    if (isWorkVisible() && !navOpen()) {
-        if (e.cancelable) {
-            e.preventDefault();
-        }
+// let scrolledToWork = false;
+$(window).scroll(function (e) {
+    if (isScrolling) {
+        e.preventDefault();
     }
-}, { passive: false });
-window.addEventListener("touchend", function (e) {
-    const isScrollEvent = (Math.abs(lastTouch - e.changedTouches[0].clientY) > 2);
-    if (isScrollEvent && isWorkVisible() && !navOpen()) {
-        if (e.cancelable) {
-            e.preventDefault();
-        }
-        if (!isScrolling) {
-            isScrolling = true;
-            if (scrollsDown(e)) {
-                scrollToWork();
-            } else {
-                scrollToHero();
-            }
-        }
-    }
-}, { passive: false });
+});
 
-// $(window).scroll(function (e) {
-//     if (e.cancelable) {
-//         e.preventDefault();
-//     }
+// Touch Events
+// window.addEventListener("touchstart", function (e) {
+//     lastTouch = e.touches[0].clientY;
+// }, { passive: false });
+// window.addEventListener("touchmove", function (e) {
 //     if (isWorkVisible() && !navOpen()) {
+//         if (e.cancelable) {
+//             e.preventDefault();
+//         }
+//     }
+// }, { passive: false });
+// window.addEventListener("touchend", function (e) {
+//     const isScrollEvent = (Math.abs(lastTouch - e.changedTouches[0].clientY) > 2);
+//     if (isScrollEvent && isWorkVisible() && !navOpen()) {
+//         if (e.cancelable) {
+//             e.preventDefault();
+//         }
 //         if (!isScrolling) {
 //             isScrolling = true;
 //             if (scrollsDown(e)) {
 //                 scrollToWork();
 //             } else {
-//                 scrollToHero();
+
+//                 //  scrollToHero();
 //             }
 //         }
 //     }
-// });
+// }, { passive: false });
 
 
 function workAtTop() {
@@ -103,7 +90,8 @@ if (!isWorkVisible()) {
 }
 
 function scrollToHero() {
-    unOrderProjects(flipDuration);
+    console.log('to hero');
+    //unOrderProjects(flipDuration);
     $('html, body').stop().animate({
         scrollTop: $('.hero').offset().top
     }, timeOut, function () {
@@ -112,7 +100,8 @@ function scrollToHero() {
 }
 
 function scrollToWork() {
-    orderProjects(flipDuration);
+    console.log('to work');
+    //orderProjects(flipDuration);
     $('html, body').stop().animate({
         scrollTop: $('.work').offset().top + 1
     }, timeOut, function () {

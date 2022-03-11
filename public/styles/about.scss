@@ -1,8 +1,25 @@
 .about {
-    min-height: 80vh;
-    padding: 130px 100px 200px;
+    min-height: 75vh;
+    padding: 200px 100px 200px;
     position: relative;
-
+    z-index: 1;
+    @media only screen and (max-width: 1200px) {
+        padding: 130px 50px 200px;
+    }
+    &:before {
+        width: 100vw;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: linear-gradient(-45deg, #04090e, #18273a);
+        content: '';
+        position: absolute;
+        z-index: -2;
+        @media only screen and (max-width: 1000px) {
+            height: 100%;
+            background: linear-gradient(#04090e, #18273a);
+        }
+      }
     @media only screen and (max-width: 1000px) {
         padding: 100px 20px 200px;
         overflow: hidden;
@@ -12,11 +29,119 @@
         padding: 100px 10px 200px;
         overflow: hidden;
     }
+    .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotate(180deg);
+        width: 100vw;
+        text-align: center;
+        svg {
+          transition: 0.7s;
+        }
+      }
+      .logo {
+        width: 0px;
+        fill: white;
+        padding-right: 15px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      
+      .inner-header {
+        height: 45vh;
+        width: 100%;
+        margin: 100;
+        padding: 100;
+      }
+      
+      .flex {
+        /*Flexbox for containers*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .waves {
+        position: relative;
+        width: 100%;
+        height: 25vh;
+        margin-bottom: -7px; /*Fix for safari gap*/
+        min-height: 100px;
+        max-height: 150px;
+      }
+      
+      .content {
+        position: relative;
+        height: 20vh;
+        text-align: center;
+        background-color: white;
+      }
+      
+      /* Animation */
+      
+      .parallax > use {
+        animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+      }
+      .parallax > use:nth-child(1) {
+        animation-delay: -2s;
+        animation-duration: 7s;
+      }
+      .parallax > use:nth-child(2) {
+        animation-delay: -3s;
+        animation-duration: 10s;
+      }
+      .parallax > use:nth-child(3) {
+        animation-delay: -4s;
+        animation-duration: 13s;
+      }
+      .parallax > use:nth-child(4) {
+        animation-delay: -5s;
+        animation-duration: 20s;
+      }
+      @keyframes move-forever {
+        0% {
+          transform: translate3d(-90px, 0, 0);
+        }
+        100% {
+          transform: translate3d(85px, 0, 0);
+        }
+      }
+      /*Shrinking for mobile*/
+      @media (max-width: 768px) {
+        .waves {
+          height: 40px;
+          min-height: 40px;
+        }
+        .content {
+          height: 30vh;
+        }
+        h1 {
+          font-size: 24px;
+        }
+      }
+    &__wave {
+        //display: none;
+        width: 100vw;
+        position: absolute;
+        left: 0;
+        top: -10px;
+        z-index: -1;
+        @media only screen and (max-width: 1200px) {
+            display: none;
+          }
+        @media only screen and (pointer: none) {
+            display: none;
+        }
+    }
     &__title {
         padding-bottom: 50px;
         text-align: center;
+        z-index: 2;
         &-left {
             display: inline-block;
+            z-index: 2;
             transform: translateX(-500px);
             opacity: 0;
             @media only screen and (max-width: 700px) {
@@ -34,7 +159,7 @@
     }
     &__container {
         display: flex;
-        padding-top: 40px;
+        padding-top: 70px;
         padding-bottom: 70px;
         @media only screen and (max-width: 700px) {
             flex-direction: column-reverse;
@@ -48,22 +173,25 @@
             padding-right: 0;
         }
         &-paragraph {
+            width: 100%;
             margin-bottom: 20px;
             display: inline-block;
             opacity: 0;
             transform: scale(0);
             &-text {
-                display: block;
+              position: relative;
+              text-indent: 60px;
+              display: block;
+              &:before {
+                position: absolute;
+                left: 0;
+                top: 14px;
+                width: 50px;
+                height: 1px;
+                background-color: white;
+                content: '';
+              }
             }
-            // &:nth-child(1) {
-            //     transform: translateX(-1500px);
-            // }
-            // &:nth-child(2) {
-            //     transform: translateX(-1000px);
-            // }
-            // &:nth-child(3) {
-            //     transform: translateX(-500px);
-            // }
         }
     }
     &__skills {
@@ -74,9 +202,11 @@
         &-container {
             display: flex;
             padding-left: 10%;
-            align-items: center;
             position: relative;
             margin-bottom: 50px;
+            flex-direction: column;
+            transform: scale(0);
+            opacity: 0;
             @media only screen and (max-width: 700px) {
                 padding: 0;
             }
@@ -85,19 +215,21 @@
                 margin-right: 20px;
             }
             &-item {
-                position: absolute;
-                width: 60%;
+                width: 90%;
+                margin-top: 5px;
                 height: 7px;
                 border: 2px solid #1BEBC1;
+                // border: 2px solid #111a25;
                 border-radius: 10px;
-                left: 40%;
+                left: 0;
                 @media only screen and (max-width: 1000px) {
                     left: 50%;
                     width: 50%;
                 }
                 @media only screen and (max-width: 700px) {
                     left: 40%;
-                    width: 60%;
+                    width: 97%;
+                    margin-top: 10px;
                 }
                 &-progress {
                     width: 0%;

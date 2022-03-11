@@ -2,8 +2,11 @@ body {
   overflow-x: hidden;
   background-color: #252525;
   background-color: #111a25;
+  background-color: #18273a;
   -webkit-transition: 0.6s ease-in-out;
   transition: 0.6s ease-in-out;
+  padding: 0;
+  margin: 0;
 }
 
 body button:hover {
@@ -15,28 +18,153 @@ body.dark {
 }
 
 body.light {
-  background-color: #e9e9e9;
+  background-color: white;
+}
+
+body.light .text-highlight {
+  color: #A930E2;
+}
+
+body.light .text-highlight {
+  color: #387a9c;
+}
+
+body.light .navigation__container-title a span:nth-child(2) {
+  color: #387a9c;
+}
+
+body.light .navigation__container-list-item:before {
+  background-color: #387a9c;
+}
+
+body.light .hero__profile-explore-btn {
+  border: 2px solid #387a9c;
+}
+
+body.light .hero__profile-explore-btn:hover {
+  background-color: rgba(56, 122, 156, 0.301);
+  -webkit-box-shadow: 0px 13px 38px 7px rgba(56, 122, 156, 0.35);
+          box-shadow: 0px 13px 38px 7px rgba(56, 122, 156, 0.35);
 }
 
 body.light .text-gray {
   color: #646464;
 }
 
-body.light .text-highlight {
-  color: #00c9a1;
+body.light .navigation {
+  background-color: rgba(245, 245, 245, 0.281);
+  border-bottom: 1px solid rgba(180, 180, 180, 0.452);
 }
 
-body.light .navigation {
+body.light .navigation.open {
   background-color: whitesmoke;
-  border-bottom: 1px solid #dadada;
+}
+
+body.light .projects__item {
+  -webkit-box-shadow: 13px 21px 50px 13px rgba(0, 0, 0, 0.329);
+  box-shadow: 13px 21px 50px 13px rgba(0, 0, 0, 0.4);
+}
+
+body.light .hero:before {
+  background: linear-gradient(-45deg, #a7a7a7, #ffffff);
+}
+
+@media only screen and (max-width: 1000px) {
+  body.light .hero:before {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#a7a7a7));
+    background: linear-gradient(#ffffff, #a7a7a7);
+  }
+}
+
+body.light .work:before {
+  background: linear-gradient(45deg, #ffffff, #a7a7a7);
+}
+
+@media only screen and (max-width: 1000px) {
+  body.light .work:before {
+    background: -webkit-gradient(linear, left top, left bottom, from(#a7a7a7), to(#ffffff));
+    background: linear-gradient(#a7a7a7, #ffffff);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  body.light .work:after {
+    display: none;
+  }
+}
+
+body.light .work .projects__item-description-line {
+  background-color: #387a9c;
+}
+
+body.light .header svg {
+  -webkit-filter: invert(45%) sepia(88%) saturate(327%) hue-rotate(156deg) brightness(85%) contrast(91%);
+          filter: invert(45%) sepia(88%) saturate(327%) hue-rotate(156deg) brightness(85%) contrast(91%);
+}
+
+body.light .about:before {
+  background: linear-gradient(-45deg, #a7a7a7, #ffffff);
+}
+
+@media only screen and (max-width: 1000px) {
+  body.light .about:before {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#a7a7a7));
+    background: linear-gradient(#ffffff, #a7a7a7);
+  }
+}
+
+body.light .about__skills-container-item {
+  border: 2px solid #3882a8;
+}
+
+body.light .about__skills-container-item-progress {
+  background-color: #3882a8;
+}
+
+body.light .about__text-paragraph-text:before {
+  background-color: #387a9c;
+}
+
+body.light .contact:before {
+  background: linear-gradient(45deg, #ffffff, #a7a7a7);
+}
+
+@media only screen and (max-width: 1000px) {
+  body.light .contact:before {
+    background: -webkit-gradient(linear, left top, left bottom, from(#a7a7a7), to(#ffffff));
+    background: linear-gradient(#a7a7a7, #ffffff);
+  }
+}
+
+body.light .contact__wave svg {
+  -webkit-filter: invert(45%) sepia(88%) saturate(327%) hue-rotate(156deg) brightness(85%) contrast(91%);
+          filter: invert(45%) sepia(88%) saturate(327%) hue-rotate(156deg) brightness(85%) contrast(91%);
+}
+
+body.light .contact input:focus, body.light .contact textarea:focus {
+  border-bottom: 2px solid #3882a8;
+}
+
+body.light .contact textarea {
+  color: #252525;
 }
 
 body.light input {
   color: #252525 !important;
 }
 
+body.light .contact__form-submit-btn {
+  border: 2px solid #387a9c;
+}
+
 body.light .contact__form-submit-btn:after {
   color: #252525;
+}
+
+body.light .contact__form-submit-btn:hover {
+  background-color: rgba(56, 122, 156, 0.301);
+  -webkit-box-shadow: 0px 13px 38px 7px rgba(56, 122, 156, 0.35);
+          box-shadow: 0px 13px 38px 7px rgba(56, 122, 156, 0.35);
 }
 
 @media (hover: none) {
