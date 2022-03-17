@@ -1,54 +1,27 @@
-$(window).on('load', function () {
+const link = document.querySelectorAll('nav > .hover-this');
+const cursorCustom = document.querySelector('.cursor');
 
+const animateit = function (e) {
+    const span = this.querySelector('span');
+    const { offsetX: x, offsetY: y } = e,
+        { offsetWidth: width, offsetHeight: height } = this,
 
+        move = 25,
+        xMove = x / width * (move * 2) - move,
+        yMove = y / height * (move * 2) - move;
 
-    var ctrl = new ScrollMagic.Controller({
-        globalSceneOptions: {
-            triggerHook: 'onLeave'
-        }
-    });
+    span.style.transform = `translate(${xMove}px, ${yMove}px)`;
 
+    if (e.type === 'mouseleave') span.style.transform = '';
+};
 
-    $('.hero-story').each(function (index, element) {
+const editCursor = e => {
+    const { clientX: x, clientY: y } = e;
+    cursorCustom.style.left = x + 'px';
+    cursorCustom.style.top = y + 'px';
+    console.log(x);
+};
 
-        new ScrollMagic.Scene({
-            triggerElement: this,
-        })
-            .setPin(this)
-            .addTo(ctrl);
-
-        new ScrollMagic.Scene({
-            triggerElement: this,
-            offset: 10
-        })
-            .addTo(ctrl)
-            .on('enter', function () {
-                if (index < 2) {
-                    TweenLite.to(window, 1, { scrollTo: { y: ".hero" + (index + 2), autoKill: false } });
-                }
-            });
-    });
-
-});
-
-// var timelineHero = new TimelineLite();
-
-
-// var sceneHero = new ScrollMagic.Scene({
-//     triggerElement: ".hero",
-//     triggerHook: "onLeave",
-//     duration: '100%',
-//     reverse: true
-// }).on('enter', function () {
-//     if (!projectsContainer.hasClass('nikos')) {
-//         projectsContainer.addClass('nikos');
-//         console.log('is scrolling to work');
-//         TweenLite.to(window, 1, { scrollTo: { y: ".work", autoKill: false } });
-//     } else {
-//         projectsContainer.removeClass('nikos');
-//         console.log('is scrolling to hero');
-//         TweenLite.to(window, 1, { scrollTo: { y: ".hero", autoKill: false } });
-//     }
-// })
-// sceneHero.setTween(timelineHero)
-// sceneHero.addTo(controller);
+link.forEach(b => b.addEventListener('mousemove', animateit));
+link.forEach(b => b.addEventListener('mouseleave', animateit));
+window.addEventListener('mousemove', editCursor);

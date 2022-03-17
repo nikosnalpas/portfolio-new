@@ -7,10 +7,15 @@ body {
   transition: 0.6s ease-in-out;
   padding: 0;
   margin: 0;
+  cursor: none;
 }
 
-body button:hover {
-  cursor: pointer;
+body a:hover, body button:hover, body input:hover, body textarea:hover {
+  cursor: none;
+}
+
+body input:focus, body teaxtarea:focus {
+  cursor: none;
 }
 
 body.dark {

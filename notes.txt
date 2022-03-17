@@ -7,3 +7,10 @@ for svg: filter: invert(86%) sepia(76%) saturate(564%) hue-rotate(87deg) brightn
 
 
 google-site-verification=6epwQKu7AQzir9IQ5Vw0Z77tN-LhAH1IN_2Bd-s3ifA
+
+
+
+
+
+
+https://codepen.io/Abdumalik_Dev/details/ExbJKXy

@@ -80,13 +80,13 @@ $(".nav-about").click(function (e) {
 
 $(".nav-contact").click(function (e) {
     e.preventDefault();
-    orderProjects(flipDuration / 3);
-    isScrolling = true;
+    orderProjects(flipDuration / 2);
     let work = $('.contact');
+    isScrolling = true;
     $('html, body').stop().animate({
         'scrollTop': work.offset().top
     }, 800, function () {
-        isScrolling = true;
+        isScrolling = false;
     });
     if (screenWidth < 1000) {
         burgerBtn.click();

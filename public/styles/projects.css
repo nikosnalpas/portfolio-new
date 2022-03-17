@@ -214,6 +214,13 @@
   }
 }
 
+@media only screen and (min-width: 1000px) {
+  .projects__item {
+    -webkit-box-shadow: 13px 21px 50px 13px rgba(0, 0, 0, 0.3);
+    box-shadow: 13px 10px 20px 13px rgba(0, 0, 0, 0.3);
+  }
+}
+
 .projects__item:hover .projects__item-description {
   opacity: 1;
 }
@@ -238,8 +245,8 @@
 
 @media only screen and (orientation: portrait) {
   .projects__item-1 {
-    width: 18vh;
-    height: 9vh;
+    width: 20vh;
+    height: 10vh;
     top: 20vh;
     left: 40%;
   }
@@ -290,8 +297,8 @@
 
 @media only screen and (orientation: portrait) {
   .projects__item-2 {
-    width: 16vh;
-    height: 8vh;
+    width: 17vh;
+    height: 8.5vh;
     top: 16vh;
     left: 20%;
   }
@@ -342,8 +349,8 @@
 
 @media only screen and (orientation: portrait) {
   .projects__item-3 {
-    width: 16vh;
-    height: 8vh;
+    width: 17vh;
+    height: 8.5vh;
     top: 25vh;
     left: 5%;
   }
@@ -394,8 +401,8 @@
 
 @media only screen and (orientation: portrait) {
   .projects__item-4 {
-    width: 15vh;
-    height: 7.5vh;
+    width: 16vh;
+    height: 8vh;
     top: 32vh;
     left: 53%;
   }
@@ -446,8 +453,8 @@
 
 @media only screen and (orientation: portrait) {
   .projects__item-5 {
-    width: 15vh;
-    height: 7.5vh;
+    width: 16vh;
+    height: 8vh;
     top: 11vh;
     left: 55%;
   }
@@ -498,8 +505,8 @@
 
 @media only screen and (orientation: portrait) {
   .projects__item-6 {
-    width: 14vh;
-    height: 7vh;
+    width: 15vh;
+    height: 7.5vh;
     left: 40%;
     top: 4vh;
   }
@@ -792,8 +799,10 @@
 }
 
 .mock__item-3 {
-  top: 18vh;
-  left: 72%;
+  top: 27vh;
+  left: 69%;
+  width: 6vw;
+  height: 3vw;
   -webkit-animation: mock3 7s ease-in-out infinite;
           animation: mock3 7s ease-in-out infinite;
 }
@@ -802,6 +811,8 @@
   .mock__item-3 {
     top: 10vh;
     left: 10%;
+    width: 6vh;
+    height: 3vh;
   }
 }
 
@@ -838,8 +849,8 @@
 .mock__item-4 {
   top: 26vh;
   left: 19%;
-  width: 9vw;
-  height: 4.5vw;
+  width: 7vw;
+  height: 3.5vw;
   -webkit-animation: mock4 7s ease-in-out infinite;
           animation: mock4 7s ease-in-out infinite;
 }
@@ -876,6 +887,150 @@
   50% {
     -webkit-transform: translateY(20px);
             transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.mock__item-5 {
+  top: 17vh;
+  left: 27%;
+  width: 6vw;
+  height: 3vw;
+  -webkit-animation: mock5 10s ease-in-out infinite;
+          animation: mock5 10s ease-in-out infinite;
+}
+
+@media only screen and (orientation: portrait) {
+  .mock__item-5 {
+    top: 19vh;
+    left: 1%;
+    width: 9vh;
+    height: 4.5vh;
+  }
+}
+
+@-webkit-keyframes mock5 {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes mock5 {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.mock__item-6 {
+  top: 80vh;
+  left: 27%;
+  width: 5vw;
+  height: 2.5vw;
+  -webkit-animation: mock6 8s ease-in-out infinite;
+          animation: mock6 8s ease-in-out infinite;
+}
+
+@media only screen and (orientation: portrait) {
+  .mock__item-6 {
+    top: 19vh;
+    left: 1%;
+    width: 9vh;
+    height: 4.5vh;
+  }
+}
+
+@-webkit-keyframes mock6 {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes mock6 {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.mock__item-7 {
+  top: 50vh;
+  left: 70%;
+  width: 6vw;
+  height: 3vw;
+  -webkit-animation: mock7 7s ease-in-out infinite;
+          animation: mock7 7s ease-in-out infinite;
+}
+
+@media only screen and (orientation: portrait) {
+  .mock__item-7 {
+    top: 19vh;
+    left: 1%;
+    width: 9vh;
+    height: 4.5vh;
+  }
+}
+
+@-webkit-keyframes mock7 {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(18px);
+            transform: translateY(18px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes mock7 {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(18px);
+            transform: translateY(18px);
   }
   100% {
     -webkit-transform: translateY(0px);

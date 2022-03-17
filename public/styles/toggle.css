@@ -18,7 +18,7 @@
 }
 
 .toggle-slot:hover {
-  cursor: pointer;
+  cursor: none;
 }
 
 .toggle-checkbox:checked ~ .toggle-slot {

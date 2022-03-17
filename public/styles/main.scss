@@ -6,9 +6,16 @@ body {
   transition: 0.6s ease-in-out;
   padding: 0;
   margin: 0;
-  button {
+  cursor: none;
+  a, button, input, textarea {
     &:hover {
-      cursor: pointer;
+      cursor: none;
+    }
+  }
+  input, teaxtarea {
+    &:focus {
+      // cursor: pointer;
+      cursor: none;
     }
   }
   &.dark {

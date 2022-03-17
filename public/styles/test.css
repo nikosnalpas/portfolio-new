@@ -1,48 +1,75 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.hero-story {
+.nav-wrapper {
   width: 100%;
   height: 100vh;
-  margin: 0 auto;
-  position: relative;
+  background: #161616;
+  z-index: 10000;
 }
 
-.module-background {
+nav {
   width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.module-background h1 {
-  color: white;
+  margin: 0 auto;
   text-align: center;
-  padding-top: 10%;
+  position: absolute;
+  top: 50%;
+  z-index: 1000000;
 }
 
-.first-hero .module-background {
-  background-color: green;
+.hover-this {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.second-hero .module-background {
-  background-color: yellow;
+span {
+  display: inline-block;
+  font-family: 'Russo One', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 36px;
+  text-transform: uppercase;
+  pointer-event: none;
+  -webkit-transition: -webkit-transform 0.1s linear;
+  transition: -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear;
+  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
 }
 
-.third-hero .module-background {
-  background-color: orange;
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  padding: 0.3rem;
+  background-color: #fff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  left: 30%;
 }
 
-.wht {
-  background: white;
+.hover-this:hover ~ .cursor {
+  -webkit-transform: translate(-50%, -50%) scale(8);
+          transform: translate(-50%, -50%) scale(8);
 }
 
-.section-last {
-  width: 100vw;
-  height: 200vh;
-  background-color: blue;
+@media (min-width: 900px) {
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 900px) {
+  nav {
+    top: 30%;
+  }
+  .hover-this {
+    width: 100%;
+    padding: 20px 0;
+    display: inline-block;
+  }
 }
 /*# sourceMappingURL=test.css.map */

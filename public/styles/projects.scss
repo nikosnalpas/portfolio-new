@@ -209,6 +209,10 @@
         width: 17vh;
         height: 9vh;
       }
+      @media only screen and (min-width: 1000px) {
+        -webkit-box-shadow: 13px 21px 50px 13px rgba(0,0,0,0.3); 
+      box-shadow: 13px 10px 20px 13px rgba(0,0,0,0.3);
+      }
       &:hover {
         .projects__item-description {
           opacity: 1;
@@ -229,8 +233,8 @@
         height: 9vw;
         z-index: 10;
         @media only screen and (orientation: portrait) {
-          width: 18vh;
-          height: 9vh;
+          width: 20vh;
+          height: 10vh;
           top: 20vh;
           left: 40%;
         }
@@ -256,8 +260,8 @@
         left: 60%;
         z-index: 9;
         @media only screen and (orientation: portrait) {
-          width: 16vh;
-          height: 8vh;
+          width: 17vh;
+          height: 8.5vh;
           top: 16vh;
           left: 20%;
         }
@@ -283,8 +287,8 @@
         height: 8vw;
         z-index: 8;
         @media only screen and (orientation: portrait) {
-          width: 16vh;
-          height: 8vh;
+          width: 17vh;
+          height: 8.5vh;
           top: 25vh;
           left: 5%;
         }
@@ -310,8 +314,8 @@
         height: 7.5vw;
         z-index: 7;
         @media only screen and (orientation: portrait) {
-          width: 15vh;
-          height: 7.5vh;
+          width: 16vh;
+          height: 8vh;
           top: 32vh;
           left: 53%;
         }
@@ -337,8 +341,8 @@
         height: 7.5vw;
         z-index: 6;
         @media only screen and (orientation: portrait) {
-          width: 15vh;
-          height: 7.5vh;
+          width: 16vh;
+          height: 8vh;
           top: 11vh;
           left: 55%;
         }
@@ -364,8 +368,8 @@
         height: 7.5vw;
         z-index: 8;
         @media only screen and (orientation: portrait) {
-          width: 14vh;
-          height: 7vh;
+          width: 15vh;
+          height: 7.5vh;
           left: 40%;
           top: 4vh;
         }
@@ -537,11 +541,15 @@
         }
       }
       &-3 {
-        top: 18vh;
-        left: 72%;
+        top: 27vh;
+        left: 69%;
+        width: 6vw;
+        height: 3vw;
         @media only screen and (orientation: portrait) {
           top: 10vh;
-          left: 10%
+          left: 10%;
+          width: 6vh;
+          height: 3vh;
         }
         animation: mock3 7s ease-in-out infinite;
         @keyframes mock3 {
@@ -559,8 +567,8 @@
       &-4 {
         top: 26vh;
         left: 19%;
-        width: 9vw;
-        height: 4.5vw;
+        width: 7vw;
+        height: 3.5vw;
         @media only screen and (orientation: portrait) {
           top: 19vh;
           left: 1%;
@@ -574,6 +582,78 @@
           }
           50% {
             transform: translateY(20px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
+      }
+      &-5 {
+        top: 17vh;
+        left: 27%;
+        width: 6vw;
+        height: 3vw;
+        @media only screen and (orientation: portrait) {
+          top: 19vh;
+          left: 1%;
+          width: 9vh;
+          height: 4.5vh;
+        }
+        animation: mock5 10s ease-in-out infinite;
+        @keyframes mock5 {
+          0% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(20px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
+      }
+      &-6 {
+        top: 80vh;
+        left: 27%;
+        width: 5vw;
+        height: 2.5vw;
+        @media only screen and (orientation: portrait) {
+          top: 19vh;
+          left: 1%;
+          width: 9vh;
+          height: 4.5vh;
+        }
+        animation: mock6 8s ease-in-out infinite;
+        @keyframes mock6 {
+          0% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
+      }
+      &-7 {
+        top: 50vh;
+        left: 70%;
+        width: 6vw;
+        height: 3vw;
+        @media only screen and (orientation: portrait) {
+          top: 19vh;
+          left: 1%;
+          width: 9vh;
+          height: 4.5vh;
+        }
+        animation: mock7 7s ease-in-out infinite;
+        @keyframes mock7 {
+          0% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(18px);
           }
           100% {
             transform: translateY(0px);
