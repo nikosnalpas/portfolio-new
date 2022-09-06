@@ -13,18 +13,23 @@ portfolio.on('mousemove', function (e) {
     cursorY = e.pageY - $(window).scrollTop();
     cursorContainer.css('top', (cursorY - 10));
     cursorContainer.css('left', (cursorX - 10));
-
-    $(this).find('.projects__item-description-title').addClass('open');
-    $(this).find('.projects__item-description-line').addClass('open');
-    $(this).find('.projects__item-description-text').addClass('open');
-    //  }
 });
 
 portfolio.on('mouseleave', function (e) {
     $(this).removeClass('hovered');
     cursor.addClass('close');
     cursor.removeClass('open');
+});
 
+projects.on('mousemove', function (e) {
+    if (screenWidth > 1000) {
+        $(this).find('.projects__item-description-title').addClass('open');
+        $(this).find('.projects__item-description-line').addClass('open');
+        $(this).find('.projects__item-description-text').addClass('open');
+    }
+});
+
+projects.on('mouseleave', function (e) {
     if (screenWidth > 1000) {
         $(this).find('.projects__item-description-title').removeClass('open');
         $(this).find('.projects__item-description-line').removeClass('open');

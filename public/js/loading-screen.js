@@ -13,7 +13,7 @@ setTimeout(function () {
     if (documentLoaded) {
         finishLoading();
     }
-}, 2500);
+}, 10);
 
 function finishLoading() {
     $('body').removeClass('stop-scroll');
